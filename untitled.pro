@@ -43,3 +43,6 @@ OTHER_FILES += \
     science_db.sqlite \
     MunaAdSetjaSqliteSkrannaIBuildMoppuna.txt \
     untitled.pro.user
+
+RESOURCES += \
+    Icons.qrc
