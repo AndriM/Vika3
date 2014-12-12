@@ -1,0 +1,14 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\baserepository.o
+./debug\computer.o
+./debug\computerrepository.o
+./debug\consoleui.o
+./debug\scienceservice.o
+./debug\scientist.o
+./debug\scientistcomputerconnections.o
+./debug\scientistcomputerconnectionsrepository.o
+./debug\scientistrepository.o
+./debug\moc_mainwindow.o
+);
