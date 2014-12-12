@@ -12,3 +12,8 @@ Scientistbase::~Scientistbase()
 {
     delete ui;
 }
+
+void Scientistbase::on_searchBar_textEdited(const QString &arg1)
+{
+
+}

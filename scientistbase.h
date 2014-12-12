@@ -15,6 +15,9 @@ public:
     explicit Scientistbase(QWidget *parent = 0);
     ~Scientistbase();
 
+private slots:
+    void on_searchBar_textEdited(const QString &arg1);
+
 private:
     Ui::Scientistbase *ui;
 };
