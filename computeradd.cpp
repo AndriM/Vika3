@@ -1,5 +1,6 @@
 #include "computeradd.h"
 #include "ui_computeradd.h"
+#include <QDebug>
 
 ComputerAdd::ComputerAdd(QWidget *parent) :
     QWidget(parent),
@@ -12,3 +13,4 @@ ComputerAdd::~ComputerAdd()
 {
     delete ui;
 }
+

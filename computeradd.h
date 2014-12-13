@@ -15,6 +15,8 @@ public:
     explicit ComputerAdd(QWidget *parent = 0);
     ~ComputerAdd();
 
+private slots:
+
 private:
     Ui::ComputerAdd *ui;
 };
