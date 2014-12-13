@@ -27,7 +27,8 @@ SOURCES += main.cpp\
     scientistbase.cpp \
     computerbase.cpp \
     computeradd.cpp \
-    connection.cpp
+    connection.cpp \
+    scientistadd.cpp
 
 HEADERS  += mainwindow.h \
     baserepository.h \
@@ -43,13 +44,15 @@ HEADERS  += mainwindow.h \
     scientistbase.h \
     computerbase.h \
     computeradd.h \
-    connection.h
+    connection.h \
+    scientistadd.h
 
 FORMS    += mainwindow.ui \
     scientistbase.ui \
     computerbase.ui \
     computeradd.ui \
-    connection.ui
+    connection.ui \
+    scientistadd.ui
 
 OTHER_FILES += \
     science_db.sqlite \
