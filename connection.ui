@@ -10,32 +10,34 @@
     <height>433</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <underline>false</underline>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="2" column="0">
-    <widget class="QPushButton" name="backButton">
-     <property name="text">
-      <string>Back</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QTableWidget" name="comptable"/>
-   </item>
-   <item row="1" column="2">
-    <widget class="QTableWidget" name="scientiststable"/>
-   </item>
-   <item row="2" column="2">
+   <item row="5" column="2">
     <widget class="QPushButton" name="connectButton">
      <property name="text">
       <string>Connect</string>
      </property>
     </widget>
    </item>
+   <item row="5" column="0">
+    <widget class="QPushButton" name="backButton">
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QTableWidget" name="scientiststable"/>
+   </item>
    <item row="0" column="0">
-    <widget class="QLabel" name="connectionLabel">
+    <widget class="QLabel" name="connection_2">
      <property name="font">
       <font>
        <pointsize>16</pointsize>
@@ -45,6 +47,29 @@
      </property>
      <property name="text">
       <string>Connection</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QTableWidget" name="comptable"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="computer">
+     <property name="font">
+      <font>
+       <italic>false</italic>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Computers</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="scientists">
+     <property name="text">
+      <string>Scientists</string>
      </property>
     </widget>
    </item>
