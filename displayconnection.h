@@ -7,7 +7,7 @@ namespace Ui {
 class displayConnection;
 }
 
-class displayConnection : public QWidget
+class displayConnection : public QDialog
 {
     Q_OBJECT
 

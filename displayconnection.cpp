@@ -2,7 +2,7 @@
 #include "ui_displayconnection.h"
 
 displayConnection::displayConnection(QWidget *parent) :
-    QWidget(parent),
+    QDialog(parent),
     ui(new Ui::displayConnection)
 {
     ui->setupUi(this);
