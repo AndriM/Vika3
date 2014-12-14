@@ -23,8 +23,6 @@ private slots:
 
     void on_byLine_textChanged(const QString &arg1);
 
-    void on_radioButton_toggled(bool checked);
-
     void on_dyLine_textChanged(const QString &arg1);
 
     void on_addButton_clicked();
@@ -32,6 +30,8 @@ private slots:
     void on_maleRadio_toggled(bool checked);
 
     void on_femaleRadio_toggled(bool checked);
+
+    void on_checkBox_toggled(bool checked);
 
 private:
     Scientist newScientist;

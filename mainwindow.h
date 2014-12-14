@@ -6,8 +6,6 @@
 #include "computer.h"
 #include "computerbase.h"
 #include "scientistbase.h"
-#include "computeradd.h"
-#include "scientistadd.h"
 #include "scienceservice.h"
 
 namespace Ui {

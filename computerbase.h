@@ -2,6 +2,7 @@
 #define COMPUTERBASE_H
 
 #include <QDialog>
+#include "computeradd.h"
 
 namespace Ui {
 class Computerbase;

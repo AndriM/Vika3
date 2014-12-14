@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>411</width>
-    <height>315</height>
+    <height>322</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -101,9 +101,9 @@
     </widget>
    </item>
    <item row="8" column="0">
-    <widget class="QRadioButton" name="radioButton">
+    <widget class="QCheckBox" name="checkBox">
      <property name="text">
-      <string>Yes</string>
+      <string>Still Alive</string>
      </property>
     </widget>
    </item>

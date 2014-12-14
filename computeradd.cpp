@@ -44,3 +44,8 @@ void ComputerAdd::on_yearLine_textChanged(const QString &arg1)
 {
     newComputer.yearBuilt = ui->yearLine->text().toStdString();
 }
+
+void ComputerAdd::on_add_clicked()
+{
+    //kalla a add fallid i main window
+}

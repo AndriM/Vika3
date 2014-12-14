@@ -26,6 +26,8 @@ private slots:
 
     void on_yearLine_textChanged(const QString &arg1);
 
+    void on_add_clicked();
+
 private:
     Ui::ComputerAdd *ui;
     Computer newComputer;
