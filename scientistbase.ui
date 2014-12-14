@@ -34,7 +34,7 @@
    <item row="1" column="0" colspan="3">
     <widget class="QLineEdit" name="searchLine">
      <property name="text">
-      <string>Search...</string>
+      <string/>
      </property>
     </widget>
    </item>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>303</width>
-    <height>270</height>
+    <width>442</width>
+    <height>322</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,9 +24,18 @@
       </font>
      </property>
      <property name="text">
-      <string>Add new computer</string>
+      <string>Add a new computer</string>
      </property>
     </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QLineEdit" name="comptype"/>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QLineEdit" name="compname"/>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="yearLine"/>
    </item>
    <item row="1" column="0">
     <widget class="QLabel" name="nameComp">
@@ -35,18 +44,19 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="0" colspan="2">
-    <widget class="QLineEdit" name="compname"/>
-   </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="typeComp">
+   <item row="6" column="0">
+    <widget class="QRadioButton" name="builtyes">
      <property name="text">
-      <string>Type:</string>
+      <string>Yes</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="0" colspan="2">
-    <widget class="QLineEdit" name="comptype"/>
+   <item row="7" column="0">
+    <widget class="QRadioButton" name="builtno">
+     <property name="text">
+      <string>No</string>
+     </property>
+    </widget>
    </item>
    <item row="5" column="0">
     <widget class="QLabel" name="builtLabel">
@@ -62,25 +72,21 @@
      </property>
     </widget>
    </item>
-   <item row="6" column="0">
-    <widget class="QRadioButton" name="builtyes">
+   <item row="3" column="0">
+    <widget class="QLabel" name="typeComp">
      <property name="text">
-      <string>Yes</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="1">
-    <widget class="QLineEdit" name="yearLine"/>
-   </item>
-   <item row="7" column="0">
-    <widget class="QRadioButton" name="builtno">
-     <property name="text">
-      <string>No</string>
+      <string>Type:</string>
      </property>
     </widget>
    </item>
    <item row="8" column="0">
     <widget class="QPushButton" name="back">
+     <property name="maximumSize">
+      <size>
+       <width>183</width>
+       <height>16777215</height>
+      </size>
+     </property>
      <property name="text">
       <string>Back</string>
      </property>
@@ -88,6 +94,18 @@
    </item>
    <item row="8" column="1">
     <widget class="QPushButton" name="addButton">
+     <property name="minimumSize">
+      <size>
+       <width>203</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>203</width>
+       <height>16777215</height>
+      </size>
+     </property>
      <property name="text">
       <string>Add</string>
      </property>

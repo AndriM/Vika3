@@ -45,9 +45,14 @@ void ComputerAdd::on_yearLine_textChanged(const QString &arg1)
     newComputer.yearBuilt = ui->yearLine->text().toStdString();
 }
 
-void ComputerAdd::on_add_clicked()
+void ComputerAdd::on_addButton_clicked()
 {
     Computer newComputer = getComputer();
     scienceService.addComputer(newComputer);
+    close();
+}
+
+void ComputerAdd::on_back_clicked()
+{
     close();
 }

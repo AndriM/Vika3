@@ -14,20 +14,29 @@
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="8" column="2" colspan="3">
-    <widget class="QLineEdit" name="dyLine"/>
+   <item row="16" column="0">
+    <widget class="QPushButton" name="backButton">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>184</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
    </item>
    <item row="4" column="0">
     <widget class="QLabel" name="byLabel">
      <property name="text">
       <string>Year of birth:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="nameLabel">
-     <property name="text">
-      <string>Name:</string>
      </property>
     </widget>
    </item>
@@ -38,22 +47,22 @@
      </property>
     </widget>
    </item>
-   <item row="16" column="0">
-    <widget class="QPushButton" name="backButton">
+   <item row="8" column="2" colspan="3">
+    <widget class="QLineEdit" name="dyLine"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="nameLabel">
      <property name="text">
-      <string>Back</string>
+      <string>Name:</string>
      </property>
     </widget>
    </item>
-   <item row="16" column="3" colspan="2">
-    <widget class="QPushButton" name="addButton">
+   <item row="6" column="2">
+    <widget class="QLabel" name="dyLabel">
      <property name="text">
-      <string>Add</string>
+      <string>Year of death:</string>
      </property>
     </widget>
-   </item>
-   <item row="5" column="0" colspan="5">
-    <widget class="QLineEdit" name="byLine"/>
    </item>
    <item row="9" column="0">
     <widget class="QLabel" name="genderLabel">
@@ -65,17 +74,34 @@
    <item row="3" column="0" colspan="5">
     <widget class="QLineEdit" name="nameLine"/>
    </item>
-   <item row="6" column="2">
-    <widget class="QLabel" name="dyLabel">
-     <property name="text">
-      <string>Year of death:</string>
-     </property>
-    </widget>
+   <item row="5" column="0" colspan="5">
+    <widget class="QLineEdit" name="byLine"/>
    </item>
    <item row="11" column="0">
     <widget class="QRadioButton" name="femaleRadio">
      <property name="text">
       <string>Female</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QCheckBox" name="checkBox">
+     <property name="text">
+      <string>Still Alive</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Still Alive:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="1" colspan="4">
+    <widget class="QPushButton" name="addButton">
+     <property name="text">
+      <string>Add</string>
      </property>
     </widget>
    </item>
@@ -89,26 +115,22 @@
       </font>
      </property>
      <property name="text">
-      <string>Add new scientist</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Still Alive:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="0">
-    <widget class="QCheckBox" name="checkBox">
-     <property name="text">
-      <string>Still Alive</string>
+      <string>Add a new scientist</string>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>maleRadio</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>nameLine</tabstop>
+  <tabstop>dyLine</tabstop>
+  <tabstop>addButton</tabstop>
+  <tabstop>backButton</tabstop>
+  <tabstop>femaleRadio</tabstop>
+  <tabstop>byLine</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

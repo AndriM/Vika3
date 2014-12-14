@@ -6,6 +6,7 @@ Scientistbase::Scientistbase(QWidget *parent) :
     ui(new Ui::Scientistbase)
 {
     ui->setupUi(this);
+    ui->searchLine->setPlaceholderText("Search scientists...");
 }
 
 Scientistbase::~Scientistbase()
