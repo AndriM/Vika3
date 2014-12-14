@@ -31,7 +31,7 @@ void Computer::setYearBuilt(const std::string &value)
 {
     yearBuilt = value;
 }
-int Computer::getType() const
+std::string Computer::getType() const
 {
     return type;
 }

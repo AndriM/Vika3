@@ -23,7 +23,6 @@ public:
     std::string getGender() const;
     void setGender(const std::string &value);
 
-private:
     int id;
     std::string name;
     std::string dateOfBirth;

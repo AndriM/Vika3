@@ -15,17 +15,16 @@ public:
     std::string getYearBuilt() const;
     void setYearBuilt(const std::string &value);
 
-    int getType() const;
+    std::string getType() const;
     void setType(int value);
 
     bool getWasBuilt() const;
     void setWasBuilt(bool value);
 
-private:
     int id;
     std::string name;
     std::string yearBuilt;
-    int type;
+    std::string type;
     bool wasBuilt;
 };
 

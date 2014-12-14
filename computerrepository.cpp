@@ -13,7 +13,7 @@ void ComputerRepository::add(Computer computer) {
     query.prepare("INSERT INTO Computers (Name, YearBuilt, Type, WasBuilt) VALUES (:name,:yb,:type,:wb)");
     query.bindValue(":name",    QString::fromStdString(computer.getName()));
     query.bindValue(":yb",      QString::fromStdString(computer.getYearBuilt()));
-    query.bindValue(":type",    QString::number(computer.getType()));
+    query.bindValue(":type",    QString::fromStdString(computer.getType()));
     query.bindValue(":wb",      QString::number(computer.getWasBuilt()));
 
     query.exec();
