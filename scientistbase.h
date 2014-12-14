@@ -2,6 +2,7 @@
 #define SCIENTISTBASE_H
 
 #include <QDialog>
+#include "scientistadd.h"
 
 namespace Ui {
 class Scientistbase;
@@ -17,6 +18,8 @@ public:
 
 private slots:
     void on_searchBar_textEdited(const QString &arg1);
+
+    void on_addButton_clicked();
 
 private:
     Ui::Scientistbase *ui;
