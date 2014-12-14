@@ -19,15 +19,11 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-
     void addComp();
     void addScientist();
-
 private slots:
     void on_pushButtonComputer_clicked();
-
     void on_pushButtonScientist_clicked();
-
 private:
     ScienceService scienceService;
     Ui::MainWindow *ui;
