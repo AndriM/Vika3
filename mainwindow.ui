@@ -37,6 +37,9 @@
         <height>145</height>
        </size>
       </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -63,6 +66,9 @@
         <width>16777215</width>
         <height>145</height>
        </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="text">
        <string/>
