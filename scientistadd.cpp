@@ -63,10 +63,10 @@ void scientistadd::on_checkBox_toggled(bool checked)
 
 void scientistadd::on_addButton_clicked()
 {
+    Scientist newScientist = getScientist();
+    scienceService.addScientist(newScientist);
     close();
 }
-
-
 
 void scientistadd::on_backButton_clicked()
 {

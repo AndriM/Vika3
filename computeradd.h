@@ -2,6 +2,7 @@
 #define COMPUTERADD_H
 
 #include "computer.h"
+#include "scienceservice.h"
 #include <QDialog>
 
 namespace Ui {
@@ -31,6 +32,7 @@ private slots:
 private:
     Ui::ComputerAdd *ui;
     Computer newComputer;
+    ScienceService scienceService;
 };
 
 #endif // COMPUTERADD_H

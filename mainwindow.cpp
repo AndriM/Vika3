@@ -23,20 +23,3 @@ void MainWindow::on_pushButtonScientist_clicked()
     Scientistbase scientistbase;
     scientistbase.exec();
 }
-
-void MainWindow::addComp()
-{
-    ComputerAdd compadd;
-    compadd.exec();
-    Computer newComputer = compadd.getComputer();
-    scienceService.addComputer(newComputer);
-
-}
-
-void MainWindow::addScientist()
-{
-    scientistadd sciadd;
-    sciadd.exec();
-    Scientist newScientist = sciadd.getScientist();
-    scienceService.addScientist(newScientist);
-}

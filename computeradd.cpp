@@ -46,5 +46,7 @@ void ComputerAdd::on_yearLine_textChanged(const QString &arg1)
 
 void ComputerAdd::on_add_clicked()
 {
+    Computer newComputer = getComputer();
+    scienceService.addComputer(newComputer);
     close();
 }

@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "scientist.h"
+#include "scienceservice.h"
 
 namespace Ui {
 class scientistadd;
@@ -36,6 +37,7 @@ private slots:
     void on_backButton_clicked();
 
 private:
+    ScienceService scienceService;
     Scientist newScientist;
     Ui::scientistadd *ui;
 };
