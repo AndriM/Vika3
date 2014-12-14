@@ -42,13 +42,17 @@
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>799433350.png</normaloff>799433350.png</iconset>
+        <normaloff>799433350.png</normaloff>
+        <normalon>:/icons/799433350.png</normalon>799433350.png</iconset>
       </property>
       <property name="iconSize">
        <size>
         <width>200</width>
         <height>200</height>
        </size>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -65,13 +69,17 @@
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>images.png</normaloff>images.png</iconset>
+        <normaloff>images.png</normaloff>
+        <normalon>:/icons/images.png</normalon>images.png</iconset>
       </property>
       <property name="iconSize">
        <size>
         <width>120</width>
         <height>120</height>
        </size>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
