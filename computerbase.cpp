@@ -6,6 +6,7 @@ Computerbase::Computerbase(QWidget *parent) :
     ui(new Ui::Computerbase)
 {
     ui->setupUi(this);
+    ui->searchLine->setPlaceholderText("Search computers...");
 }
 
 Computerbase::~Computerbase()
