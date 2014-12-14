@@ -29,7 +29,34 @@
     </widget>
    </item>
    <item row="2" column="0" colspan="3">
-    <widget class="QTableWidget" name="listTable"/>
+    <widget class="QTableWidget" name="listTable">
+     <property name="showGrid">
+      <bool>false</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Birth year</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Death year</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Gender</string>
+      </property>
+     </column>
+    </widget>
    </item>
    <item row="1" column="0" colspan="3">
     <widget class="QLineEdit" name="searchLine">
