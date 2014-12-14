@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include "scientistadd.h"
-#include "connection.h"
+#include "scientistconnect.h"
 #include "displayconnection.h"
 
 namespace Ui {
