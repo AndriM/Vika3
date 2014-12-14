@@ -18,7 +18,7 @@
     <widget class="QTableWidget" name="listTable"/>
    </item>
    <item row="3" column="0">
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="button_connect">
      <property name="text">
       <string>Connect scientists</string>
      </property>
