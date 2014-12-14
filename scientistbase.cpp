@@ -23,3 +23,20 @@ void Scientistbase::on_addButton_clicked()
     scientistadd sciAdd;
     sciAdd.exec();
 }
+
+void Scientistbase::on_button_connect_clicked()
+{
+    connection connect;
+    connect.exec();
+}
+
+void Scientistbase::on_button_disp_conn_clicked()
+{
+    displayConnection disConn;
+    disConn.exec();
+}
+
+void Scientistbase::on_backButton_clicked()
+{
+    close();
+}
