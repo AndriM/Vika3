@@ -35,7 +35,7 @@
     <widget class="QColumnView" name="columnView"/>
    </item>
    <item row="3" column="0">
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="backButton">
      <property name="text">
       <string>Back</string>
      </property>

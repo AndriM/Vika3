@@ -25,7 +25,7 @@
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="button_disp_connected">
      <property name="text">
       <string>Display connections</string>
      </property>

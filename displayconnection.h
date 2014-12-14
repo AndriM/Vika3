@@ -15,6 +15,9 @@ public:
     explicit displayConnection(QWidget *parent = 0);
     ~displayConnection();
 
+private slots:
+    void on_backButton_clicked();
+
 private:
     Ui::displayConnection *ui;
 };

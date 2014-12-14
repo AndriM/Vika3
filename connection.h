@@ -15,6 +15,11 @@ public:
     explicit connection(QWidget *parent = 0);
     ~connection();
 
+private slots:
+    void on_backButton_clicked();
+
+    void on_connectButton_clicked();
+
 private:
     Ui::connection *ui;
 };

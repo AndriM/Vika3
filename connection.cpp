@@ -12,3 +12,14 @@ connection::~connection()
 {
     delete ui;
 }
+
+void connection::on_backButton_clicked()
+{
+    close();
+}
+
+void connection::on_connectButton_clicked()
+{
+    //setja inn koda fyrir tengingu comp-scientist
+    close();
+}

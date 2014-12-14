@@ -17,6 +17,7 @@ ComputerAdd::~ComputerAdd()
 {
     delete ui;
 }
+
 void ComputerAdd::on_compname_textChanged(const QString &arg1)
 {
     newComputer.name = ui->compname->text().toStdString();

@@ -12,3 +12,8 @@ displayConnection::~displayConnection()
 {
     delete ui;
 }
+
+void displayConnection::on_backButton_clicked()
+{
+    close();
+}
