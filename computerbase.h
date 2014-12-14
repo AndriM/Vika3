@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::Computerbase *ui;
+    //Computerbase computerbase;
 };
 
 #endif // COMPUTERBASE_H

@@ -16,7 +16,7 @@ public:
     ~ComputerAdd();
 
 private slots:
-
+    
 private:
     Ui::ComputerAdd *ui;
 };

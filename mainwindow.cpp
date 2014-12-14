@@ -14,10 +14,12 @@ MainWindow::~MainWindow()
 }
 void MainWindow::on_pushButtonComputer_clicked()
 {
-
+    Computerbase computerbase;
+    computerbase.exec();
 }
 
 void MainWindow::on_pushButtonScientist_clicked()
 {
-
+    Scientistbase scientistbase;
+    scientistbase.exec();
 }
