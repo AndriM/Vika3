@@ -49,11 +49,6 @@ void scientistadd::on_femaleRadio_toggled(bool checked)
     }
 }
 
-void scientistadd::on_addButton_clicked()
-{
-    //kalla a add fallid i main window
-}
-
 void scientistadd::on_checkBox_toggled(bool checked)
 {
     if(checked)
@@ -64,4 +59,16 @@ void scientistadd::on_checkBox_toggled(bool checked)
     {
         ui->dyLine->setEnabled(true);
     }
+}
+
+void scientistadd::on_addButton_clicked()
+{
+    close();
+}
+
+
+
+void scientistadd::on_backButton_clicked()
+{
+    close();
 }

@@ -1,7 +1,7 @@
 #ifndef CONNECTION_H
 #define CONNECTION_H
 
-#include <QWidget>
+#include <QDialog>
 
 namespace Ui {
 class connection;

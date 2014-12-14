@@ -33,6 +33,8 @@ private slots:
 
     void on_checkBox_toggled(bool checked);
 
+    void on_backButton_clicked();
+
 private:
     Scientist newScientist;
     Ui::scientistadd *ui;

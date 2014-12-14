@@ -2,13 +2,13 @@
 #define COMPUTERADD_H
 
 #include "computer.h"
-#include <QWidget>
+#include <QDialog>
 
 namespace Ui {
 class ComputerAdd;
 }
 
-class ComputerAdd : public QWidget
+class ComputerAdd : public QDialog
 {
     Q_OBJECT
 

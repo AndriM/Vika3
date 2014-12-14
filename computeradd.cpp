@@ -1,9 +1,8 @@
 #include "computeradd.h"
 #include "ui_computeradd.h"
-#include <QDebug>
 
 ComputerAdd::ComputerAdd(QWidget *parent) :
-    QWidget(parent),
+    QDialog(parent),
     ui(new Ui::ComputerAdd)
 {
     ui->setupUi(this);
@@ -47,5 +46,5 @@ void ComputerAdd::on_yearLine_textChanged(const QString &arg1)
 
 void ComputerAdd::on_add_clicked()
 {
-    //kalla a add fallid i main window
+    close();
 }

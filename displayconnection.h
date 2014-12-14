@@ -1,7 +1,7 @@
 #ifndef DISPLAYCONNECTION_H
 #define DISPLAYCONNECTION_H
 
-#include <QWidget>
+#include <QDialog>
 
 namespace Ui {
 class displayConnection;
