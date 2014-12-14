@@ -2,6 +2,7 @@
 #define SCIENTISTADD_H
 
 #include <QDialog>
+#include "scientist.h"
 
 namespace Ui {
 class scientistadd;
@@ -14,8 +15,26 @@ class scientistadd : public QDialog
 public:
     explicit scientistadd(QWidget *parent = 0);
     ~scientistadd();
+    Scientist getScientist();
+
+private slots:
+
+    void on_nameLine_textChanged(const QString &arg1);
+
+    void on_byLine_textChanged(const QString &arg1);
+
+    void on_radioButton_toggled(bool checked);
+
+    void on_dyLine_textChanged(const QString &arg1);
+
+    void on_addButton_clicked();
+
+    void on_maleRadio_toggled(bool checked);
+
+    void on_femaleRadio_toggled(bool checked);
 
 private:
+    Scientist newScientist;
     Ui::scientistadd *ui;
 };
 
