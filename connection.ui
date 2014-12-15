@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Computer Connection</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="5" column="0">
@@ -69,6 +69,15 @@
    </item>
    <item row="4" column="0">
     <widget class="QTableWidget" name="comp_table">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="showGrid">
+      <bool>false</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
      <attribute name="verticalHeaderVisible">
       <bool>false</bool>
      </attribute>
@@ -86,6 +95,15 @@
    </item>
    <item row="4" column="2">
     <widget class="QTableWidget" name="sci_table">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="showGrid">
+      <bool>false</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
      <attribute name="verticalHeaderVisible">
       <bool>false</bool>
      </attribute>
