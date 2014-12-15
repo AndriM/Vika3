@@ -24,8 +24,8 @@ private slots:
     void on_button_connect_clicked();
     void on_button_disp_conn_clicked();
     void on_backButton_clicked();
-//    void displayAllScientists();
-//    void on_searchLine_textChanged(const QString &arg1);
+    void displayAllScientists();
+    void on_searchLine_textChanged(const QString &arg1);
 private:
     Ui::Scientistbase *ui;
     ScienceService scienceService;

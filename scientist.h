@@ -23,6 +23,10 @@ public:
     std::string getGender() const;
     void setGender(const std::string &value);
 
+    std::string toString();
+    bool contains(std::string str);
+    std::string stringToLower(std::string original);
+
     int id;
     std::string name;
     std::string dateOfBirth;
