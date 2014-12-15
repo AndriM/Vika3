@@ -6,6 +6,7 @@
 
 #include <stdexcept>
 #include <iostream>
+#include <vector>
 
 class ComputerRepository : public BaseRepository
 {
@@ -15,13 +16,13 @@ public:
 
     void add(Computer);
     void remove(std::string id);
-    std::list<Computer> search(std::string searchTerm);
-    std::list<Computer> list();
+    std::vector<Computer> search(std::string searchTerm);
+    std::vector<Computer> list();
     // Returns a list ordered by column and modifier
-    std::list<Computer> list(std::string col,std::string mod);
+    std::vector<Computer> list(std::string col,std::string mod);
 private:
-    std::list<Computer> computerList;
-    void populateComputerList(std::list<Computer> &computerList, QSqlQuery query);
+    std::vector<Computer> computerList;
+    void populateComputerList(std::vector<Computer> &computerList, QSqlQuery query);
 };
 
 #endif // COMPUTERREPOSITORY_H
