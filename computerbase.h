@@ -24,7 +24,7 @@ private slots:
     void on_button_disp_connected_clicked();
     void on_button_connect_clicked();
     void on_backButton_clicked();
-  //void on_searchLine_textChanged(const QString &arg1);
+    void on_searchLine_textChanged(const QString &arg1);
 
 
 private:

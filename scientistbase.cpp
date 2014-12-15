@@ -8,6 +8,7 @@ Scientistbase::Scientistbase(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->searchLine->setPlaceholderText("Search scientists...");
+    displayAllScientists();
 }
 
 Scientistbase::~Scientistbase()
@@ -45,14 +46,12 @@ void Scientistbase::on_backButton_clicked()
 
 void Scientistbase::displayAllScientists()
 {
-    //addKomment
     ui->listTable->clearContents();
-//    currentScientists = scienceService.getAllScientists();
+    currentScientists = scienceService.getAllScientists();
     ui->listTable->setRowCount(currentScientists.size());
     currentlyDisplayedScientists.clear();
 
     for(unsigned int i = 0; i < currentScientists.size(); i++)
-//    for(std::vector<Scientist>::iterator iter = currentScientists.begin(); iter != currentScientists.end(); iter ++)
     {
         Scientist currentScientist = currentScientists[i];
         std::string searchString = ui->searchLine->text().toStdString();

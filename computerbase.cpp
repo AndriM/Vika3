@@ -8,6 +8,7 @@ Computerbase::Computerbase(QWidget *parent) :
     ui->setupUi(this);
     ui->searchLine->setPlaceholderText("Search computers...");
     scienceService = ScienceService();
+    displayAllComputers();
 }
 
 Computerbase::~Computerbase()
@@ -37,13 +38,16 @@ void Computerbase::on_backButton_clicked()
 {
     close();
 }
+
 void Computerbase::getAllComputers()
 {
     currentComputers = scienceService.getAllComputers();
 }
+
 void Computerbase::displayAllComputers()
 {
     ui->listTable->clear();
+    currentComputers = scienceService.getAllComputers();
     ui->listTable->setRowCount(currentComputers.size());
     currentlyDisplayedComputers.clear();
 
@@ -71,7 +75,8 @@ void Computerbase::displayAllComputers()
     }
     ui->listTable->setRowCount(currentlyDisplayedComputers.size());
 }
-/*void Computerbase::on_searchLine_textChanged(const QString &arg1) <---- afhverju virkar ekki?
+
+void Computerbase::on_searchLine_textChanged(const QString &arg1)
 {
-    ui->searchLine->setPlaceholderText("Search computers...");
-}*/
+    displayAllComputers();
+}
