@@ -29,11 +29,11 @@
       </property>
      </widget>
     </item>
-    <item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
      <widget class="QPushButton" name="pushButtonComputer">
       <property name="maximumSize">
        <size>
-        <width>16777215</width>
+        <width>145</width>
         <height>145</height>
        </size>
       </property>
@@ -59,7 +59,7 @@
       </property>
      </widget>
     </item>
-    <item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
      <widget class="QPushButton" name="pushButtonScientist">
       <property name="maximumSize">
        <size>
