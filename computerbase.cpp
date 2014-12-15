@@ -7,6 +7,7 @@ Computerbase::Computerbase(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->searchLine->setPlaceholderText("Search computers...");
+    scienceService = ScienceService();
 }
 
 Computerbase::~Computerbase()
@@ -36,3 +37,41 @@ void Computerbase::on_backButton_clicked()
 {
     close();
 }
+void Computerbase::getAllComputers()
+{
+    currentComputers = scienceService.getAllComputers();
+}
+void Computerbase::displayAllComputers()
+{
+    ui->listTable->clear();
+    ui->listTable->setRowCount(currentComputers.size());
+    currentlyDisplayedComputers.clear();
+
+ for(std::list<Computer>::iterator iter = currentComputers.begin(); iter != currentComputers.end(); iter ++)
+    {
+        Computer currentComputer = currentComputers(i);
+        std::string searchString = ui->searchLine->text().toStdString();
+
+        if(currentComputer.contains(searchString))
+        {
+            QString ComputerName = QString::fromStdString(currentComputer.getName());
+            QString ComputeryearBuilt = QString::fromStdString(currentComputer.getYearBuilt());
+            QString Computertype = QString::fromStdString(currentComputer.getType());
+            //QString ComputerwasBuilt = QString::fromStdString(currentScientist.getWasBuilt()); bool má það?
+
+            int currentRow = currentlyDisplayedComputers.size();
+
+            ui->listTable->setItem(currentRow, 0, new QTableWidgetItem(ComputerName));
+            ui->listTable->setItem(currentRow, 1, new QTableWidgetItem(ComputeryearBuilt));
+            ui->listTable->setItem(currentRow, 2, new QTableWidgetItem(Computertype));
+            //ui->listTable->setItem(currentRow, 3, new QTableWidgetItem(ComputerwasBuilt));
+
+            currentlyDisplayedComputers.push_back(currentComputer);
+        }
+    }
+    ui->listTable->setRowCount(currentlyDisplayedComputers.size());
+}
+/*void Computerbase::on_searchLine_textChanged(const QString &arg1) <---- afhverju virkar ekki?
+{
+    ui->searchLine->setPlaceholderText("Search computers...");
+}*/

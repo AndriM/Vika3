@@ -26,6 +26,9 @@ public:
     std::string yearBuilt;
     std::string type;
     bool wasBuilt;
+    std::string stringToLower(std::string original);
+    std::string toString();
+    bool contains(std::string str);
 };
 
 #endif // COMPUTER_H

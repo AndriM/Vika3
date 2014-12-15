@@ -27,6 +27,7 @@ private slots:
 private:
     ScienceService scienceService;
     Ui::MainWindow *ui;
+
 };
 
 #endif // MAINWINDOW_H

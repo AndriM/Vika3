@@ -49,6 +49,42 @@ void Computer::setWasBuilt(bool value)
 {
     wasBuilt = value;
 }
+bool Computer::contains(std::string str)
+{
+    if(str == "")
+    {
+        return true;
+    }
+
+    std::string searchStringToLower = Computer::stringToLower(str);
+
+    if(Computer::stringToLower(this->toString()).find(searchStringToLower) != std::string::npos)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+std::string Computer::stringToLower(std::string original)
+{
+    std::string result = "";
+
+    for(unsigned int i = 0; i < original.length(); ++i)
+    {
+        result += std::tolower(original[i]);
+    }
+
+    return result;
+}
+
+std::string Computer::toString()
+{
+    return name + " " + yearBuilt + " " + type + " " /*+ wasBuilt*/;
+}
+
 
 
 
