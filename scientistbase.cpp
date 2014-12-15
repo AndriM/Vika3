@@ -45,13 +45,14 @@ void Scientistbase::on_backButton_clicked()
 
 void Scientistbase::displayAllScientists()
 {
+    //addKomment
     ui->listTable->clearContents();
 //    currentScientists = scienceService.getAllScientists();
     ui->listTable->setRowCount(currentScientists.size());
     currentlyDisplayedScientists.clear();
 
     for(unsigned int i = 0; i < currentScientists.size(); i++)
-//      for(std::list<Scientist>::iterator iter = currentScientists.begin(); iter != currentScientists.end(); iter ++)
+//    for(std::list<Scientist>::iterator iter = currentScientists.begin(); iter != currentScientists.end(); iter ++)
     {
         Scientist currentScientist = currentScientists[i];
         std::string searchString = ui->searchLine->text().toStdString();
