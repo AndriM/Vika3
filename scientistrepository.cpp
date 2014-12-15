@@ -12,21 +12,13 @@ ScientistRepository::~ScientistRepository() {
 
 void ScientistRepository::add(Scientist scientist) {
 
-    if(db.isOpen())
-    {
-        std::cout <<"open";
-    }
-    std::cout << scientist.name;
-    std::cout << scientist.dateOfBirth;
-    std::cout << scientist.dateOfDeath;
-    std::cout << scientist.gender;
-
     QSqlQuery query(db);
-    query.prepare("INSERT INTO Scientists (Name, DateOfBirth, DateOfDeath, Gender) VALUES (:name,:dob,:dod,:gender)");
+    query.prepare("INSERT INTO Scientists (Name, BirthYear, DeathYear, Gender, ImagePath) VALUES (:name,:dob,:dod,:gender,:imagePath)");
     query.bindValue(":name",    QString::fromStdString(scientist.getName()));
     query.bindValue(":dob",     QString::fromStdString(scientist.getDateOfBirth()));
     query.bindValue(":dod",     QString::fromStdString(scientist.getDateOfDeath()));
     query.bindValue(":gender",  QString::fromStdString(scientist.getGender()));
+    query.bindValue(":imagePath",QString::fromStdString(scientist.getImagepath()));
 
     query.exec();
 }
@@ -89,9 +81,10 @@ void ScientistRepository::populateScientistList(std::vector<Scientist> &scientis
         Scientist s = Scientist();
         s.setId(query.value("ID").toInt());
         s.setName(query.value("Name").toString().toStdString());
-        s.setDateOfBirth(query.value("DateOfBirth").toString().toStdString());
-        s.setDateOfDeath(query.value("DateOfDeath").toString().toStdString());
+        s.setDateOfBirth(query.value("BirthYear").toString().toStdString());
+        s.setDateOfDeath(query.value("DeathYear").toString().toStdString());
         s.setGender(query.value("Gender").toString().toStdString());
+        s.setImagepath(query.value("ImagePath").toString().toStdString());
 
         scientistList.push_back(s);
     }

@@ -2,6 +2,7 @@
 #define SCIENTISTADD_H
 
 #include <QDialog>
+#include <QFileDialog>
 #include "scientist.h"
 #include "scienceservice.h"
 
@@ -26,6 +27,8 @@ private slots:
     void on_femaleRadio_toggled(bool checked);
     void on_checkBox_toggled(bool checked);
     void on_backButton_clicked();
+    void on_photoButton_clicked();
+
 private:
     ScienceService scienceService;
     Scientist newScientist;

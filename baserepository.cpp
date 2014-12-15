@@ -24,7 +24,7 @@ QSqlDatabase BaseRepository::getDatabaseConnection()
     else
     {
         database = QSqlDatabase::addDatabase("QSQLITE", connectionName);
-        database.setDatabaseName("science_db.sqlite");
+        database.setDatabaseName("vika3.sqlite");
 
         database.open();
 

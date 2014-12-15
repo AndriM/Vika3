@@ -23,6 +23,9 @@ public:
     std::string getGender() const;
     void setGender(const std::string &value);
 
+    std::string getImagepath() const;
+    void setImagepath(const std::string &value);
+
     std::string toString();
     bool contains(std::string str);
     std::string stringToLower(std::string original);
@@ -32,6 +35,7 @@ public:
     std::string dateOfBirth;
     std::string dateOfDeath;
     std::string gender;
+    std::string imagePath;
 };
 
 #endif // SCIENTIST_H

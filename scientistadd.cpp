@@ -72,3 +72,18 @@ void scientistadd::on_backButton_clicked()
 {
     close();
 }
+
+
+void scientistadd::on_photoButton_clicked()
+{
+    QString filename = QFileDialog::getOpenFileName(this,
+                        "Browse for image...",
+                        "",
+                        "Image files (*.png *.jpg *.jpeg *.bmp)"
+                        );
+
+    ui->imageLine->setText(filename);
+
+    newScientist.imagePath = ui->imageLine->text().toStdString();
+
+}

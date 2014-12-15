@@ -43,6 +43,14 @@ void Scientist::setGender(const std::string &value)
 {
     gender = value;
 }
+std::string Scientist::getImagepath() const
+{
+    return imagePath;
+}
+void Scientist::setImagepath(const std::string &value)
+{
+    imagePath = value;
+}
 
 int Scientist::getId() const
 {
