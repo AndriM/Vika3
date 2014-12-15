@@ -16,16 +16,16 @@ public:
     void setYearBuilt(const std::string &value);
 
     std::string getType() const;
-    void setType(int value);
+    void setType(std::string value);
 
-    bool getWasBuilt() const;
-    void setWasBuilt(bool value);
+    std::string getWasBuilt() const;
+    void setWasBuilt(std::string value);
 
     int id;
     std::string name;
     std::string yearBuilt;
     std::string type;
-    bool wasBuilt;
+    std::string wasBuilt;
     std::string stringToLower(std::string original);
     std::string toString();
     bool contains(std::string str);

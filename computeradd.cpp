@@ -22,24 +22,10 @@ void ComputerAdd::on_compname_textChanged(const QString &arg1)
 {
     newComputer.name = ui->compname->text().toStdString();
 }
-
 void ComputerAdd::on_comptype_textChanged(const QString &arg1)
 {
     newComputer.type = ui->comptype->text().toStdString();
 }
-
-void ComputerAdd::on_builtyes_toggled(bool checked)
-{
-    if(checked)
-    {
-        ui->yearLine->setEnabled(true);
-    }
-    else
-    {
-        ui->yearLine->setEnabled(false);
-    }
-}
-
 void ComputerAdd::on_yearLine_textChanged(const QString &arg1)
 {
     newComputer.yearBuilt = ui->yearLine->text().toStdString();
@@ -55,4 +41,23 @@ void ComputerAdd::on_addButton_clicked()
 void ComputerAdd::on_back_clicked()
 {
     close();
+}
+
+void ComputerAdd::on_builtno_toggled(bool checked)
+{
+    if(checked)
+    {
+        ui->yearLine->setEnabled(false);
+    }
+    else
+    {
+        ui->yearLine->setEnabled(true);
+    }
+
+    newComputer.wasBuilt = "No";
+}
+
+void ComputerAdd::on_builtyes_clicked()
+{
+    newComputer.wasBuilt = "Yes";
 }

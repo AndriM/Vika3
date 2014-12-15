@@ -163,11 +163,11 @@ void ConsoleUI::handleAddComputer(){
     clear();
     std::cout << "Enter type: ";
     std::cin >> input;
-    additionalComputer.setType(atoi(input.c_str()));
+    additionalComputer.setType(input);
     clear();
     std::cout << "Was the computer built? 1 for 'Yes' or 0 for 'No': ";
     std::cin >> input;
-    additionalComputer.setWasBuilt(atoi(input.c_str()));
+    additionalComputer.setWasBuilt(input);
     scienceService.addComputer(additionalComputer);
     clear();
 }
@@ -181,7 +181,7 @@ void ConsoleUI::handleAddConnection(){
     std::cout << "Enter the id of the computer to connect: ";
     std::cin >> cidToAdd;
 
-    scienceService.addConnection(sidToAdd, cidToAdd);
+    //scienceService.addConnection(sidToAdd, cidToAdd);
     clear();
 }
 
@@ -212,7 +212,7 @@ void ConsoleUI::handleDeleteConnection(){
     std::cout << "Enter the id of the computer to disconnect: ";
     std::cin >> cidToDelete;
 
-    scienceService.removeConnection(sidToDelete, cidToDelete);
+    //scienceService.removeConnection(sidToDelete, cidToDelete);
     clear();
 }
 

@@ -36,16 +36,16 @@ std::string Computer::getType() const
     return type;
 }
 
-void Computer::setType(int value)
+void Computer::setType(std::string value)
 {
     type = value;
 }
-bool Computer::getWasBuilt() const
+std::string Computer::getWasBuilt() const
 {
     return wasBuilt;
 }
 
-void Computer::setWasBuilt(bool value)
+void Computer::setWasBuilt(std::string value)
 {
     wasBuilt = value;
 }

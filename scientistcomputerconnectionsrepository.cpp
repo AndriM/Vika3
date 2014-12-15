@@ -50,8 +50,8 @@ void ScientistComputerConnectionsRepository::populateComputerList(std::vector<Co
         c.setId(query.value("ID").toInt());
         c.setName(query.value("Name").toString().toStdString());
         c.setYearBuilt(query.value("YearBuilt").toString().toStdString());
-        c.setType(query.value("Type").toInt());
-        c.setWasBuilt(query.value("WasBuilt").toInt());
+        c.setType(query.value("Type").toString().toStdString());
+        c.setWasBuilt(query.value("WasBuilt").toString().toStdString());
 
         computerList.push_back(c);
     }
