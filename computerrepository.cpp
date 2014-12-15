@@ -10,11 +10,11 @@ ComputerRepository::~ComputerRepository() {
 void ComputerRepository::add(Computer computer) {
 
     QSqlQuery query(db);
-    query.prepare("INSERT INTO Computers (Name, ConstructionYear, Type, Constructed) VALUES (:name,:yb,:type,:wb)");
+    query.prepare("INSERT INTO Computers (Name, Type, Constructed, ConstructionYear) VALUES (:name,:type,:wb,:yb)");
     query.bindValue(":name",    QString::fromStdString(computer.getName()));
+    query.bindValue(":type",      QString::fromStdString(computer.getType()));
+    query.bindValue(":wb",    QString::fromStdString(computer.getWasBuilt()));
     query.bindValue(":yb",      QString::fromStdString(computer.getYearBuilt()));
-    query.bindValue(":type",    QString::fromStdString(computer.getType()));
-    query.bindValue(":wb",      QString::fromStdString(computer.getWasBuilt()));
 
     query.exec();
 }
@@ -77,9 +77,9 @@ void ComputerRepository::populateComputerList(std::vector<Computer> &computerLis
         Computer c = Computer();
         c.setId(query.value("ID").toInt());
         c.setName(query.value("Name").toString().toStdString());
-        c.setYearBuilt(query.value("ConstructionYear").toString().toStdString());
         c.setType(query.value("Type").toString().toStdString());
         c.setWasBuilt(query.value("Constructed").toString().toStdString());
+        c.setYearBuilt(query.value("ConstructionYear").toString().toStdString());
 
         computerList.push_back(c);
     }

@@ -61,14 +61,14 @@ void Computerbase::displayAllComputers()
             QString ComputerName = QString::fromStdString(currentComputer.getName());
             QString ComputeryearBuilt = QString::fromStdString(currentComputer.getYearBuilt());
             QString Computertype = QString::fromStdString(currentComputer.getType());
-            //QString ComputerwasBuilt = QString::fromStdString(currentScientist.getWasBuilt()); bool má það?
+            QString ComputerwasBuilt = QString::fromStdString(currentComputer.getWasBuilt());
 
             int currentRow = currentlyDisplayedComputers.size();
 
             ui->listTable->setItem(currentRow, 0, new QTableWidgetItem(ComputerName));
-            ui->listTable->setItem(currentRow, 1, new QTableWidgetItem(ComputeryearBuilt));
-            ui->listTable->setItem(currentRow, 2, new QTableWidgetItem(Computertype));
-            //ui->listTable->setItem(currentRow, 3, new QTableWidgetItem(ComputerwasBuilt));
+            ui->listTable->setItem(currentRow, 1, new QTableWidgetItem(Computertype));
+            ui->listTable->setItem(currentRow, 2, new QTableWidgetItem(ComputerwasBuilt));
+            ui->listTable->setItem(currentRow, 3, new QTableWidgetItem(ComputeryearBuilt));
 
             currentlyDisplayedComputers.push_back(currentComputer);
         }
