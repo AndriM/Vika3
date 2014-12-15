@@ -32,7 +32,11 @@
     <widget class="QLineEdit" name="lineEdit"/>
    </item>
    <item row="2" column="0">
-    <widget class="QColumnView" name="columnView"/>
+    <widget class="QColumnView" name="columnView">
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+    </widget>
    </item>
    <item row="3" column="0">
     <widget class="QPushButton" name="backButton">
