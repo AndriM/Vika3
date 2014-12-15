@@ -7,7 +7,7 @@
 
 #include <stdexcept>
 #include <iostream>
-
+/*
 class ScientistComputerConnectionsRepository : BaseRepository
 {
 public:
@@ -22,5 +22,5 @@ private:
     void populateComputerList(std::vector<Computer> &computerList, QSqlQuery query);
     void populateScientistList(std::vector<Scientist> &scientistList, QSqlQuery query);
 };
-
+*/
 #endif // SCIENTISTCOMPUTERCONNECTIONSREPOSITORY_H

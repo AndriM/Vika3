@@ -57,7 +57,7 @@ std::vector<Computer> ComputerRepository::list(std::string col, std::string mod)
 
 }
 
-std::vector<Computer> ComputerRepository::search(std::string searchTerm) {
+/*std::vector<Computer> ComputerRepository::search(std::string searchTerm) {
     // Naive search implementation, finds a substring in the name field
     std::vector<Computer> computerList = std::vector<Computer>();
 
@@ -70,7 +70,7 @@ std::vector<Computer> ComputerRepository::search(std::string searchTerm) {
     populateComputerList(computerList, query);
 
     return computerList;
-}
+}*/
 
 void ComputerRepository::populateComputerList(std::vector<Computer> &computerList, QSqlQuery query){
     while(query.next()){
@@ -84,3 +84,39 @@ void ComputerRepository::populateComputerList(std::vector<Computer> &computerLis
         computerList.push_back(c);
     }
 }
+void ComputerRepository::connect(int cID, int sID) {
+
+            computerDB = getDatabaseConnection();
+            computerDB.open();
+            QSqlQuery query(computerDB);
+
+            query.exec(QString("INSERT INTO Joined (c_ID, s_ID) VALUES (%1,%2);")
+                            .arg(cID)
+                            .arg(sID));
+
+           computerDB.close();
+}
+
+std::list<Computer> ComputerRepository::connectedComputers(int cID) {
+
+    std::list<Computer> comp = std::list<Computer>();
+    Computer c = Computer();
+    computerDB = getDatabaseConnection();
+    computerDB.open();
+    QSqlQuery query(computerDB);
+    QString c_ID = QString::number(cID);
+
+    query.exec(QString("SELECT ID, Name FROM Computers JOIN Joined ON Joined.c_ID = Computers.ID WHERE Joined.s_ID = %1")
+                      .arg(cID));
+
+    while(query.next()){
+        c.name                    = query.value("Name").toString().toStdString();
+
+        comp.push_back(c);
+    }
+        computerDB.close();
+
+    return comp;
+}
+
+

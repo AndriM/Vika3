@@ -1,6 +1,6 @@
 #ifndef SCIENTISTCOMPUTERCONNECTIONS_H
 #define SCIENTISTCOMPUTERCONNECTIONS_H
-
+/*
 #include <string>
 
 class ScientistComputerConnections
@@ -18,5 +18,5 @@ private:
     int sid;
     int cid;
 };
-
+*/
 #endif // SCIENTISTCOMPUTERCONNECTIONS_H

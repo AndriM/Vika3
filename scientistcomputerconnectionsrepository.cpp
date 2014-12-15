@@ -1,5 +1,5 @@
 #include "scientistcomputerconnectionsrepository.h"
-
+/*
 ScientistComputerConnectionsRepository::ScientistComputerConnectionsRepository()
 {
     createConnection();
@@ -105,4 +105,4 @@ bool ScientistComputerConnectionsRepository::removeConnection(std::string sid, s
     qDebug() << query.lastError();
     qDebug() << query.lastQuery();
     return result;
-}
+}*/

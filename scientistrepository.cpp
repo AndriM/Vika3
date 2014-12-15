@@ -61,7 +61,7 @@ std::vector<Scientist> ScientistRepository::list(std::string col, std::string mo
 
 }
 
-std::vector<Scientist> ScientistRepository::search(std::string searchTerm) {
+/*std::vector<Scientist> ScientistRepository::search(std::string searchTerm) {
     // Naive search implementation, finds a substring in the name field
     std::vector<Scientist> scientistList = std::vector<Scientist>();
 
@@ -74,7 +74,7 @@ std::vector<Scientist> ScientistRepository::search(std::string searchTerm) {
     populateScientistList(scientistList, query);
 
     return scientistList;
-}
+}*/
 
 void ScientistRepository::populateScientistList(std::vector<Scientist> &scientistList, QSqlQuery query){
     while(query.next()){
@@ -89,3 +89,39 @@ void ScientistRepository::populateScientistList(std::vector<Scientist> &scientis
         scientistList.push_back(s);
     }
 }
+
+void ScientistRepository::connect(int sID, int cID) {
+
+        scientistDB = getDatabaseConnection();
+        scientistDB.open();
+        QSqlQuery query(scientistDB);
+
+        query.exec(QString("INSERT INTO Joined (s_ID, c_ID) VALUES (%1,%2);")
+                        .arg(sID)
+                        .arg(cID));
+
+       scientistDB.close();
+}
+
+std::list<Scientist> ScientistRepository::connectedScientists(int sID) {
+
+    std::list<Scientist> scientist = std::list<Scientist>();
+    Scientist s = Scientist();
+    scientistDB = getDatabaseConnection();
+    scientistDB.open();
+    QSqlQuery query(scientistDB);
+    QString s_ID = QString::number(sID);
+
+    query.exec(QString("SELECT ID, Name FROM scientists JOIN Joined ON Joined.s_ID = scientists.ID WHERE Joined.c_ID = %1")
+                      .arg(sID));
+
+    while(query.next()){
+        s.name                    = query.value("Name").toString().toStdString();
+
+        scientist.push_back(s);
+    }
+        scientistDB.close();
+
+    return scientist;
+}
+

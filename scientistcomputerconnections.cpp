@@ -1,5 +1,5 @@
 #include "scientistcomputerconnections.h"
-
+/*
 ScientistComputerConnections::ScientistComputerConnections()
 {
 }
@@ -22,5 +22,5 @@ void ScientistComputerConnections::setCid(int value)
 {
     cid = value;
 }
-
+*/
 

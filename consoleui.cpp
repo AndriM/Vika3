@@ -89,7 +89,7 @@ int ConsoleUI::respondToMessage() {
             }else{
                 throw std::runtime_error( userRequest + " is not a valid command.");
             }
-        } else if(userRequest.find("search") != std::string::npos) {
+        } /*else if(userRequest.find("search") != std::string::npos) {
             std::cout << SEARCH_MENU << std::endl;
             std::cin >> userRequest;
             if(userRequest.find("0")!= std::string::npos){
@@ -99,15 +99,15 @@ int ConsoleUI::respondToMessage() {
             }else if(userRequest.find("exit")!= std::string::npos){
                 waitForPrompt();
                 clear();
-            }else{
+            }else {
                 throw std::runtime_error( userRequest + " is not a valid command.");
-            }
-        } else if (userRequest.find("exit") != std::string::npos) {
+            }*/
+            else if (userRequest.find("exit") != std::string::npos) {
             return 0;
         } else {
             throw std::runtime_error( userRequest + " is not a valid command.");
-        }
-    } catch(std::runtime_error e) {
+    }
+    }catch(std::runtime_error e) {
         clear();
         std::cout << "Command caused an error: " << e.what() << std::endl;
         std::cout << "Please try another command" << std::endl;
@@ -216,7 +216,7 @@ void ConsoleUI::handleDeleteConnection(){
     clear();
 }
 
-void ConsoleUI::handleSearchScientist(){
+/*void ConsoleUI::handleSearchScientist(){
     clear();
     std::string searchTerm = "";
     std::cout << "Enter the search term: ";
@@ -233,9 +233,9 @@ void ConsoleUI::handleSearchScientist(){
     }
     waitForPrompt();
     clear();
-}
+}*/
 
-void ConsoleUI::handleSearchComputer(){
+/*void ConsoleUI::handleSearchComputer(){
     clear();
     std::string searchTerm = "";
     std::cout << "Enter the search term: ";
@@ -252,7 +252,7 @@ void ConsoleUI::handleSearchComputer(){
     }
     waitForPrompt();
     clear();
-}
+}*/
 
 void ConsoleUI::handleFilterScientist(){
     clear();
@@ -281,10 +281,10 @@ void ConsoleUI::handleFilterScientist(){
         }
 
         std::cout << GET_ALL_MENU << std::endl;
-        std::vector<Computer> l = scienceService.getAllComputersByScientistId(userRequest);
+        /*std::vector<Computer> l = scienceService.getAllComputersByScientistId(userRequest);
         for(std::vector<Computer>::iterator iter = l.begin(); iter != l.end(); iter ++) {
             std::cout << iter->getId() << "\t" << iter->getName() << "\t" << iter->getYearBuilt() << "\t\t" << iter->getType() << "\t\t" << iter->getWasBuilt() << std::endl;
-        }
+        }*/
     }
 
     waitForPrompt();
@@ -309,12 +309,11 @@ void ConsoleUI::handleFilterComputer(){
     while(std::cin >> userRequest && userRequest.find("exit") != std::string::npos){
         clear();
         std::cout << GET_ALL_MENU << std::endl;
-        std::vector<Scientist> l = scienceService.getAllScientistsByComputerId(userRequest);
+        /*std::vector<Scientist> l = scienceService.getAllScientistsByComputerId(userRequest);
         for(std::vector<Scientist>::iterator iter = l.begin(); iter != l.end(); iter ++) {
             std::cout << iter->getId() << "\t" << iter->getName() << "\t" << iter->getDateOfBirth() << "\t\t" << iter->getDateOfDeath() << "\t\t" << iter->getGender() << std::endl;
-        }
+        }*/
     }
-
 
     waitForPrompt();
     clear();

@@ -30,8 +30,8 @@ private:
     void handleDeleteScientist();
     void handleDeleteComputer();
     void handleDeleteConnection();
-    void handleSearchScientist();
-    void handleSearchComputer();
+    //void handleSearchScientist();
+    //void handleSearchComputer();
     void handleFilterScientist();
     void handleFilterComputer();
 };
