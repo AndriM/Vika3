@@ -19,20 +19,20 @@ public:
     //Scientists
     void addScientist(Scientist scientist);
     void removeScientist(std::string id);
-    std::list<Scientist> searchScientist(std::string searchTerm);
-    std::list<Scientist> getAllScientists();
-    std::list<Scientist> getScientistsOrderedBy(std::string col,std::string mod);
+    std::vector<Scientist> searchScientist(std::string searchTerm);
+    std::vector<Scientist> getAllScientists();
+    std::vector<Scientist> getScientistsOrderedBy(std::string col,std::string mod);
 
     //Computers
     void addComputer(Computer computer);
     void removeComputer(std::string id);
-    std::list<Computer> searchComputer(std::string searchTerm);
-    std::list<Computer> getAllComputers();
-    std::list<Computer> getComputersOrderedBy(std::string col,std::string mod);
+    std::vector<Computer> searchComputer(std::string searchTerm);
+    std::vector<Computer> getAllComputers();
+    std::vector<Computer> getComputersOrderedBy(std::string col,std::string mod);
 
     //Connections
-    std::list<Computer> getAllComputersByScientistId(std::string id);
-    std::list<Scientist> getAllScientistsByComputerId(std::string id);
+    std::vector<Computer> getAllComputersByScientistId(std::string id);
+    std::vector<Scientist> getAllScientistsByComputerId(std::string id);
     bool addConnection(std::string sid, std::string cid);
     bool removeConnection(std::string sid, std::string cid);
 

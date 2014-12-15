@@ -34,12 +34,12 @@ void ComputerRepository::remove(std::string id) {
     query.exec();
 }
 
-std::list<Computer> ComputerRepository::list() {
+std::vector<Computer> ComputerRepository::list() {
     return list("","");
 }
 
-std::list<Computer> ComputerRepository::list(std::string col, std::string mod) {
-    std::list<Computer> computerList = std::list<Computer>();
+std::vector<Computer> ComputerRepository::list(std::string col, std::string mod) {
+    std::vector<Computer> computerList = std::vector<Computer>();
 
     QSqlQuery query(db);
     std::string orderBy = "";
@@ -57,9 +57,9 @@ std::list<Computer> ComputerRepository::list(std::string col, std::string mod) {
 
 }
 
-std::list<Computer> ComputerRepository::search(std::string searchTerm) {
+std::vector<Computer> ComputerRepository::search(std::string searchTerm) {
     // Naive search implementation, finds a substring in the name field
-    std::list<Computer> computerList = std::list<Computer>();
+    std::vector<Computer> computerList = std::vector<Computer>();
 
     QSqlQuery query(db);
 
@@ -72,7 +72,7 @@ std::list<Computer> ComputerRepository::search(std::string searchTerm) {
     return computerList;
 }
 
-void ComputerRepository::populateComputerList(std::list<Computer> &computerList, QSqlQuery query){
+void ComputerRepository::populateComputerList(std::vector<Computer> &computerList, QSqlQuery query){
     while(query.next()){
         Computer c = Computer();
         c.setId(query.value("ID").toInt());

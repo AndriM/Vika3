@@ -223,9 +223,9 @@ void ConsoleUI::handleSearchScientist(){
     std::cin.ignore();
     std::getline(std::cin,searchTerm);
     clear();
-    std::list<Scientist> l = scienceService.searchScientist(searchTerm);
+    std::vector<Scientist> l = scienceService.searchScientist(searchTerm);
     if(l.size() > 0) {
-        for(std::list<Scientist>::iterator iter = l.begin(); iter != l.end(); iter ++) {
+        for(std::vector<Scientist>::iterator iter = l.begin(); iter != l.end(); iter ++) {
             std::cout << iter->getId() << "\t" << iter->getName() << "\t" << iter->getDateOfBirth() << "\t\t" << iter->getDateOfDeath() << "\t\t" << iter->getGender() << std::endl;
         }
     } else {
@@ -242,9 +242,9 @@ void ConsoleUI::handleSearchComputer(){
     std::cin.ignore();
     std::getline(std::cin,searchTerm);
     clear();
-    std::list<Computer> l = scienceService.searchComputer(searchTerm);
+    std::vector<Computer> l = scienceService.searchComputer(searchTerm);
     if(l.size() > 0) {
-        for(std::list<Computer>::iterator iter = l.begin(); iter != l.end(); iter ++) {
+        for(std::vector<Computer>::iterator iter = l.begin(); iter != l.end(); iter ++) {
             std::cout << iter->getId() << "\t" << iter->getName() << "\t" << iter->getYearBuilt() << "\t\t" << iter->getType() << "\t\t" << iter->getWasBuilt() << std::endl;
         }
     } else {
@@ -261,9 +261,9 @@ void ConsoleUI::handleFilterScientist(){
     std::cout << FILTER_COMMAND_MENU << std::endl;
     std::cin >> filterCol >> filterMod;
     clear();
-    std::list<Scientist> l = scienceService.getScientistsOrderedBy(filterCol,filterMod);
+    std::vector<Scientist> l = scienceService.getScientistsOrderedBy(filterCol,filterMod);
     std::cout << "Name:\t\tDateOfBirth:\tDateOfDeath:\tGender:\n";
-    for(std::list<Scientist>::iterator iter = l.begin(); iter != l.end(); iter ++) {
+    for(std::vector<Scientist>::iterator iter = l.begin(); iter != l.end(); iter ++) {
         std::cout << iter->getId() << "\t" << iter->getName() << "\t" << iter->getDateOfBirth() << "\t\t" << iter->getDateOfDeath() << "\t\t" << iter->getGender() << std::endl;
     }
 
@@ -276,13 +276,13 @@ void ConsoleUI::handleFilterScientist(){
         clear();
 
         std::cout << "ID:\tName:\t\tDateOfBirth:\tDateOfDeath:\tGender:\n";
-        for(std::list<Scientist>::iterator iter = l.begin(); iter != l.end(); iter ++) {
+        for(std::vector<Scientist>::iterator iter = l.begin(); iter != l.end(); iter ++) {
             std::cout << iter->getId() << "\t" << iter->getName() << "\t" << iter->getDateOfBirth() << "\t\t" << iter->getDateOfDeath() << "\t\t" << iter->getGender() << std::endl;
         }
 
         std::cout << GET_ALL_MENU << std::endl;
-        std::list<Computer> l = scienceService.getAllComputersByScientistId(userRequest);
-        for(std::list<Computer>::iterator iter = l.begin(); iter != l.end(); iter ++) {
+        std::vector<Computer> l = scienceService.getAllComputersByScientistId(userRequest);
+        for(std::vector<Computer>::iterator iter = l.begin(); iter != l.end(); iter ++) {
             std::cout << iter->getId() << "\t" << iter->getName() << "\t" << iter->getYearBuilt() << "\t\t" << iter->getType() << "\t\t" << iter->getWasBuilt() << std::endl;
         }
     }
@@ -298,9 +298,9 @@ void ConsoleUI::handleFilterComputer(){
     std::cout << FILTER_COMMAND_MENU << std::endl;
     std::cin >> filterCol >> filterMod;
     clear();
-    std::list<Computer> l = scienceService.getComputersOrderedBy(filterCol,filterMod);
+    std::vector<Computer> l = scienceService.getComputersOrderedBy(filterCol,filterMod);
     std::cout << "Name:\t\tYearBuilt:\tType:\tWasBuilt:\n";
-    for(std::list<Computer>::iterator iter = l.begin(); iter != l.end(); iter ++) {
+    for(std::vector<Computer>::iterator iter = l.begin(); iter != l.end(); iter ++) {
         std::cout << iter->getId() << "\t" << iter->getName() << "\t" << iter->getYearBuilt() << "\t\t" << iter->getType() << "\t\t" << iter->getWasBuilt() << std::endl;
     }
 
@@ -309,8 +309,8 @@ void ConsoleUI::handleFilterComputer(){
     while(std::cin >> userRequest && userRequest.find("exit") != std::string::npos){
         clear();
         std::cout << GET_ALL_MENU << std::endl;
-        std::list<Scientist> l = scienceService.getAllScientistsByComputerId(userRequest);
-        for(std::list<Scientist>::iterator iter = l.begin(); iter != l.end(); iter ++) {
+        std::vector<Scientist> l = scienceService.getAllScientistsByComputerId(userRequest);
+        for(std::vector<Scientist>::iterator iter = l.begin(); iter != l.end(); iter ++) {
             std::cout << iter->getId() << "\t" << iter->getName() << "\t" << iter->getDateOfBirth() << "\t\t" << iter->getDateOfDeath() << "\t\t" << iter->getGender() << std::endl;
         }
     }

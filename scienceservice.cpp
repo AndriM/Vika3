@@ -15,15 +15,15 @@ void ScienceService::removeScientist(std::string id) {
     scientistRepository.remove(id);
 }
 
-std::list<Scientist> ScienceService::getAllScientists() {
+std::vector<Scientist> ScienceService::getAllScientists() {
     return scientistRepository.list();
 }
 
-std::list<Scientist> ScienceService::getScientistsOrderedBy(std::string col, std::string mod) {
+std::vector<Scientist> ScienceService::getScientistsOrderedBy(std::string col, std::string mod) {
     return scientistRepository.list(col,mod);
 }
 
-std::list<Scientist> ScienceService::searchScientist(std::string searchTerm) {
+std::vector<Scientist> ScienceService::searchScientist(std::string searchTerm) {
     return scientistRepository.search(searchTerm);
 }
 
@@ -37,27 +37,27 @@ void ScienceService::removeComputer(std::string id)
     computerRepository.remove(id);
 }
 
-std::list<Computer> ScienceService::searchComputer(std::string searchTerm)
+std::vector<Computer> ScienceService::searchComputer(std::string searchTerm)
 {
     return computerRepository.search(searchTerm);
 }
 
-std::list<Computer> ScienceService::getAllComputers()
+std::vector<Computer> ScienceService::getAllComputers()
 {
     return computerRepository.list();
 }
 
-std::list<Computer> ScienceService::getComputersOrderedBy(std::string col, std::string mod)
+std::vector<Computer> ScienceService::getComputersOrderedBy(std::string col, std::string mod)
 {
     return computerRepository.list(col, mod);
 }
 
-std::list<Computer> ScienceService::getAllComputersByScientistId(std::string id)
+std::vector<Computer> ScienceService::getAllComputersByScientistId(std::string id)
 {
     return scientistComputerConnectionsRepository.getAllComputersByScientistId(id);
 }
 
-std::list<Scientist> ScienceService::getAllScientistsByComputerId(std::string id)
+std::vector<Scientist> ScienceService::getAllScientistsByComputerId(std::string id)
 {
     return scientistComputerConnectionsRepository.getAllScientistsByComputerId(id);
 }

@@ -5,9 +5,9 @@ ScientistComputerConnectionsRepository::ScientistComputerConnectionsRepository()
     createConnection();
 }
 
-std::list<Computer> ScientistComputerConnectionsRepository::getAllComputersByScientistId(std::string id)
+std::vector<Computer> ScientistComputerConnectionsRepository::getAllComputersByScientistId(std::string id)
 {
-    std::list<Computer> computerList = std::list<Computer>();
+    std::vector<Computer> computerList = std::vector<Computer>();
 
     QSqlQuery query(db);
 
@@ -25,9 +25,9 @@ std::list<Computer> ScientistComputerConnectionsRepository::getAllComputersBySci
     return computerList;
 }
 
-std::list<Scientist> ScientistComputerConnectionsRepository::getAllScientistsByComputerId(std::string id)
+std::vector<Scientist> ScientistComputerConnectionsRepository::getAllScientistsByComputerId(std::string id)
 {
-    std::list<Scientist> scientistList = std::list<Scientist>();
+    std::vector<Scientist> scientistList = std::vector<Scientist>();
     QSqlQuery query(db);
 
     query.prepare("SELECT s.* FROM Scientists s "
@@ -44,7 +44,7 @@ std::list<Scientist> ScientistComputerConnectionsRepository::getAllScientistsByC
     return scientistList;
 }
 
-void ScientistComputerConnectionsRepository::populateComputerList(std::list<Computer> &computerList, QSqlQuery query){
+void ScientistComputerConnectionsRepository::populateComputerList(std::vector<Computer> &computerList, QSqlQuery query){
     while(query.next()){
         Computer c = Computer();
         c.setId(query.value("ID").toInt());
@@ -57,7 +57,7 @@ void ScientistComputerConnectionsRepository::populateComputerList(std::list<Comp
     }
 }
 
-void ScientistComputerConnectionsRepository::populateScientistList(std::list<Scientist> &scientistList, QSqlQuery query)
+void ScientistComputerConnectionsRepository::populateScientistList(std::vector<Scientist> &scientistList, QSqlQuery query)
 {
     while(query.next()){
         Scientist s = Scientist();

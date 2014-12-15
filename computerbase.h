@@ -34,8 +34,8 @@ private:
 
     ScienceService scienceService;
 
-    std::list<Computer> currentComputers;
-    std::list<Computer> currentlyDisplayedComputers;
+    std::vector<Computer> currentComputers;
+    std::vector<Computer> currentlyDisplayedComputers;
     //Computerbase computerbase;
 };
 

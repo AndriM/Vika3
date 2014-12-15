@@ -47,7 +47,7 @@ void Computerbase::displayAllComputers()
     ui->listTable->setRowCount(currentComputers.size());
     currentlyDisplayedComputers.clear();
 
- for(std::list<Computer>::iterator iter = currentComputers.begin(); iter != currentComputers.end(); iter ++)
+ for(std::vector<Computer>::iterator iter = currentComputers.begin(); iter != currentComputers.end(); iter ++)
     {
         Computer currentComputer = currentComputers(i);
         std::string searchString = ui->searchLine->text().toStdString();

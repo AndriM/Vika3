@@ -12,6 +12,15 @@ ScientistRepository::~ScientistRepository() {
 
 void ScientistRepository::add(Scientist scientist) {
 
+    if(db.isOpen())
+    {
+        std::cout <<"open";
+    }
+    std::cout << scientist.name;
+    std::cout << scientist.dateOfBirth;
+    std::cout << scientist.dateOfDeath;
+    std::cout << scientist.gender;
+
     QSqlQuery query(db);
     query.prepare("INSERT INTO Scientists (Name, DateOfBirth, DateOfDeath, Gender) VALUES (:name,:dob,:dod,:gender)");
     query.bindValue(":name",    QString::fromStdString(scientist.getName()));
@@ -36,13 +45,13 @@ void ScientistRepository::remove(std::string id) {
     query.exec();
 }
 
-std::list<Scientist> ScientistRepository::list() {
+std::vector<Scientist> ScientistRepository::list() {
     return list("","");
 }
 
-std::list<Scientist> ScientistRepository::list(std::string col, std::string mod) {
+std::vector<Scientist> ScientistRepository::list(std::string col, std::string mod) {
 
-    std::list<Scientist> scientistList = std::list<Scientist>();
+    std::vector<Scientist> scientistList = std::vector<Scientist>();
 
     QSqlQuery query(db);
     std::string orderBy = "";
@@ -60,9 +69,9 @@ std::list<Scientist> ScientistRepository::list(std::string col, std::string mod)
 
 }
 
-std::list<Scientist> ScientistRepository::search(std::string searchTerm) {
+std::vector<Scientist> ScientistRepository::search(std::string searchTerm) {
     // Naive search implementation, finds a substring in the name field
-    std::list<Scientist> scientistList = std::list<Scientist>();
+    std::vector<Scientist> scientistList = std::vector<Scientist>();
 
     QSqlQuery query(db);
 
@@ -75,7 +84,7 @@ std::list<Scientist> ScientistRepository::search(std::string searchTerm) {
     return scientistList;
 }
 
-void ScientistRepository::populateScientistList(std::list<Scientist> &scientistList, QSqlQuery query){
+void ScientistRepository::populateScientistList(std::vector<Scientist> &scientistList, QSqlQuery query){
     while(query.next()){
         Scientist s = Scientist();
         s.setId(query.value("ID").toInt());

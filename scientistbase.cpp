@@ -52,7 +52,7 @@ void Scientistbase::displayAllScientists()
     currentlyDisplayedScientists.clear();
 
     for(unsigned int i = 0; i < currentScientists.size(); i++)
-//    for(std::list<Scientist>::iterator iter = currentScientists.begin(); iter != currentScientists.end(); iter ++)
+//    for(std::vector<Scientist>::iterator iter = currentScientists.begin(); iter != currentScientists.end(); iter ++)
     {
         Scientist currentScientist = currentScientists[i];
         std::string searchString = ui->searchLine->text().toStdString();
