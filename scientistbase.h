@@ -6,7 +6,6 @@
 #include "scientistconnect.h"
 #include "displayconnection.h"
 #include "scienceservice.h"
-//#include <QList>
 
 namespace Ui {
 class Scientistbase;
@@ -19,7 +18,6 @@ public:
     explicit Scientistbase(QWidget *parent = 0);
     ~Scientistbase();
 private slots:
-    void on_searchBar_textEdited(const QString &arg1);
     void on_addButton_clicked();
     void on_button_connect_clicked();
     void on_button_disp_conn_clicked();

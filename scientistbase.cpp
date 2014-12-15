@@ -16,11 +16,6 @@ Scientistbase::~Scientistbase()
     delete ui;
 }
 
-void Scientistbase::on_searchBar_textEdited(const QString &arg1)
-{
-
-}
-
 void Scientistbase::on_addButton_clicked()
 {
     scientistadd sciAdd;
