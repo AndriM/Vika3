@@ -59,12 +59,18 @@
      <property name="text">
       <string>Add</string>
      </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
     </widget>
    </item>
    <item row="9" column="0" colspan="2">
     <widget class="QPushButton" name="backButton">
      <property name="text">
       <string>Back</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
      </property>
     </widget>
    </item>
@@ -87,12 +93,18 @@
      <property name="text">
       <string>   Display connections    </string>
      </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
     </widget>
    </item>
    <item row="8" column="0" colspan="2">
     <widget class="QPushButton" name="button_connect">
      <property name="text">
       <string>Connect computers</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
      </property>
     </widget>
    </item>

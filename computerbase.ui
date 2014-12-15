@@ -52,12 +52,18 @@
      <property name="text">
       <string>Connect scientists</string>
      </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
     </widget>
    </item>
    <item row="3" column="1">
     <widget class="QPushButton" name="button_disp_connected">
      <property name="text">
       <string>Display connections</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
      </property>
     </widget>
    </item>
@@ -66,12 +72,18 @@
      <property name="text">
       <string>Back</string>
      </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
     </widget>
    </item>
    <item row="4" column="1">
     <widget class="QPushButton" name="addButton">
      <property name="text">
       <string>Add</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
      </property>
     </widget>
    </item>
