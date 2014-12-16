@@ -21,20 +21,13 @@ void DisplaySciConnection::displayConnectedScientists()
     for(unsigned int i = 0; i < currentScientists.size(); i++)
     {
         Scientist currentScientist = currentScientists[i];
-//        std::string searchString = ui->searchLine->text().toStdString();
-//        if(currentComputer.contains(searchString))
-//        {
-        //QString scientistID = QString::number(currentScientist.getId());
         QString scientistName = QString::fromStdString(currentScientist.getName());
-//        QString scientistDateOfDeath = QString::fromStdString(currentScientist.getDateOfDeath());
-//        QString scientistGender = QString::fromStdString(currentScientist.getGender());
         int currentRow = currentlyDisplayedScientists.size();
-        //ui->sci_table->setItem(currentRow, 0, new QTableWidgetItem(scientistID));
+
         ui->sci_table->setItem(currentRow, 0, new QTableWidgetItem(scientistName));
-//        ui->sci_table->setItem(currentRow, 2, new QTableWidgetItem(scientistDateOfDeath));
-//        ui->sci_table->setItem(currentRow, 3, new QTableWidgetItem(scientistGender));
+
         currentlyDisplayedScientists.push_back(currentScientist);
-//        }
+
     }
     ui->sci_table->setRowCount(currentlyDisplayedScientists.size());
 }
@@ -58,22 +51,15 @@ void DisplaySciConnection::displayAllComputers()
     for(unsigned int i = 0; i < currentComputers.size(); i++)
     {
         Computer currentComputer = currentComputers[i];
-//        std::string searchString = ui->searchLine->text().toStdString();
-        //if(currentScientist.contains(ID))
-        //{
+
             QString ComputerID = QString::number(currentComputer.getId());
             QString ComputerName = QString::fromStdString(currentComputer.getName());
-//            QString ComputeryearBuilt = QString::fromStdString(currentComputer.getYearBuilt());
-//            QString Computertype = QString::fromStdString(currentComputer.getType());
-//            QString ComputerwasBuilt = QString::fromStdString(currentComputer.getWasBuilt());
+
             int currentRow = currentlyDisplayedComputers.size();
             ui->comp_table->setItem(currentRow, 0, new QTableWidgetItem(ComputerID));
             ui->comp_table->setItem(currentRow, 1, new QTableWidgetItem(ComputerName));
-//            ui->sci_table->setItem(currentRow, 1, new QTableWidgetItem(Computertype));
-//            ui->sci_table->setItem(currentRow, 2, new QTableWidgetItem(ComputerwasBuilt));
-//            ui->sci_table->setItem(currentRow, 3, new QTableWidgetItem(ComputeryearBuilt));
+
             currentlyDisplayedComputers.push_back(currentComputer);
-        //}
     }
     ui->comp_table->setRowCount(currentlyDisplayedComputers.size());
 }
