@@ -9,12 +9,6 @@ DisplaySciConnection::DisplaySciConnection(QWidget *parent) :
     ui->setupUi(this);
     displayAllScientists();
     currentComputers = scienceService.getAllComputers();
-    for(unsigned int i = 0; i < currentComputers.size(); i++)
-    {
-        Computer currentComputer = currentComputers[i];
-        ui->comboBox->addItem(QString::fromStdString(currentComputer.getName()));
-       // ui->comboBox->itemData(0, )
-    }
 }
 
 DisplaySciConnection::~DisplaySciConnection()
@@ -36,17 +30,17 @@ void DisplaySciConnection::displayAllScientists()
 
 //        if(currentComputer.contains(searchString))
 //        {
+        QString scientistID = QString::number(currentScientist.getId());
         QString scientistName = QString::fromStdString(currentScientist.getName());
-        QString scientistDateOfBirth = QString::fromStdString(currentScientist.getDateOfBirth());
-        QString scientistDateOfDeath = QString::fromStdString(currentScientist.getDateOfDeath());
-        QString scientistGender = QString::fromStdString(currentScientist.getGender());
+//        QString scientistDateOfDeath = QString::fromStdString(currentScientist.getDateOfDeath());
+//        QString scientistGender = QString::fromStdString(currentScientist.getGender());
 
         int currentRow = currentlyDisplayedScientists.size();
 
-        ui->sci_table->setItem(currentRow, 0, new QTableWidgetItem(scientistName));
-        ui->sci_table->setItem(currentRow, 1, new QTableWidgetItem(scientistDateOfBirth));
-        ui->sci_table->setItem(currentRow, 2, new QTableWidgetItem(scientistDateOfDeath));
-        ui->sci_table->setItem(currentRow, 3, new QTableWidgetItem(scientistGender));
+        ui->sci_table->setItem(currentRow, 0, new QTableWidgetItem(scientistID));
+        ui->sci_table->setItem(currentRow, 1, new QTableWidgetItem(scientistName));
+//        ui->sci_table->setItem(currentRow, 2, new QTableWidgetItem(scientistDateOfDeath));
+//        ui->sci_table->setItem(currentRow, 3, new QTableWidgetItem(scientistGender));
 
         currentlyDisplayedScientists.push_back(currentScientist);
 //        }
@@ -59,33 +53,41 @@ void DisplaySciConnection::on_backButton_clicked()
     close();
 }
 
-void DisplaySciConnection::on_comboBox_activated(const QString &arg1)
+void DisplaySciConnection::on_pushButton_clicked()
 {
-
+    int row = ui->sci_table->currentRow();
+    ID = ui->sci_table->item(row,0)->text().toInt();
+    scienceService.connectedComputers(ID);
+    displayConnectedComputers();
 }
-
-void DisplaySciConnection::on_comboBox_currentTextChanged(const QString &arg1)
+void DisplaySciConnection::displayConnectedComputers()
 {
-//    Computer currentComputer;
-//    currentComputers = scienceService.getAllComputers();
-//    //for(unsigned int i = 0; i < currentComputers.size(); i++)
-//    //{
-//        //Computer currentComputer = currentComputers[i];
-//        //compID = ui->comboBox->property(QString::number(currentComputer.getId()));
-//        //ui->comboBox->addItem(QString::fromStdString(currentComputer.getName()));
-//        compID = ui->comboBox->property(currentComputer.getId()).toInt();
-//        scienceService.connectedComputers(compID);
-//    //}
-}
+    ui->comp_table->clearContents();
+    currentComputers = scienceService.connectedComputers(ID);
+    ui->comp_table->setRowCount(currentComputers.size());
+    currentlyDisplayedComputers.clear();
 
-void DisplaySciConnection::on_comboBox_currentIndexChanged(int index)
-{
-//    Computer currentComputer;
-//    currentComputers = scienceService.getAllComputers();
-//    for(unsigned int i = 0; i < currentComputers.size(); i++)
-//    {
-//        Computer currentComputer = currentComputers[i];
-//        compID = ui->comboBox->currentData(currentComputer.getId());
-//        scienceService.connectedComputers(compID);
-//    }
+    for(unsigned int i = 0; i < currentComputers.size(); i++)
+    {
+        Computer currentComputer = currentComputers[i];
+//        std::string searchString = ui->searchLine->text().toStdString();
+
+        //if(currentScientist.contains(ID))
+        //{
+            QString ComputerName = QString::fromStdString(currentComputer.getName());
+//            QString ComputeryearBuilt = QString::fromStdString(currentComputer.getYearBuilt());
+//            QString Computertype = QString::fromStdString(currentComputer.getType());
+//            QString ComputerwasBuilt = QString::fromStdString(currentComputer.getWasBuilt());
+
+            int currentRow = currentlyDisplayedComputers.size();
+
+            ui->comp_table->setItem(currentRow, 0, new QTableWidgetItem(ComputerName));
+//            ui->sci_table->setItem(currentRow, 1, new QTableWidgetItem(Computertype));
+//            ui->sci_table->setItem(currentRow, 2, new QTableWidgetItem(ComputerwasBuilt));
+//            ui->sci_table->setItem(currentRow, 3, new QTableWidgetItem(ComputeryearBuilt));
+
+            currentlyDisplayedComputers.push_back(currentComputer);
+        //}
+    }
+    ui->comp_table->setRowCount(currentlyDisplayedComputers.size());
 }

@@ -18,14 +18,10 @@ public:
     explicit DisplaySciConnection(QWidget *parent = 0);
     ~DisplaySciConnection();    
     void displayAllScientists();
+    void displayConnectedComputers();
 private slots:
     void on_backButton_clicked();
-
-    void on_comboBox_activated(const QString &arg1);
-
-    void on_comboBox_currentTextChanged(const QString &arg1);
-
-    void on_comboBox_currentIndexChanged(int index);
+    void on_pushButton_clicked();
 
 private:
     Ui::DisplaySciConnection *ui;
@@ -34,7 +30,7 @@ private:
     std::vector<Scientist> currentlyDisplayedScientists;
     std::vector<Computer> currentComputers;
     std::vector<Computer> currentlyDisplayedComputers;
-    int compID;
+    int ID;
 
 };
 

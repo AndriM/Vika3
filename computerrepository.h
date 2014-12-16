@@ -21,7 +21,7 @@ public:
     // Returns a list ordered by column and modifier
     std::vector<Computer> list(std::string col,std::string mod);
     void connect(int cID, int sID);
-    std::list<Computer> connectedComputers(int cID);
+    std::vector<Computer> connectedComputers(int cID);
 private:
     std::vector<Computer> computerList;
     void populateComputerList(std::vector<Computer> &computerList, QSqlQuery query);

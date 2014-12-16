@@ -97,9 +97,9 @@ void ComputerRepository::connect(int cID, int sID) {
            computerDB.close();
 }
 
-std::list<Computer> ComputerRepository::connectedComputers(int cID) {
+std::vector<Computer> ComputerRepository::connectedComputers(int cID) {
 
-    std::list<Computer> comp = std::list<Computer>();
+    std::vector<Computer> comp = std::vector<Computer>();
     Computer c = Computer();
     computerDB = getDatabaseConnection();
     computerDB.open();

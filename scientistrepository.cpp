@@ -105,9 +105,9 @@ void ScientistRepository::connect(int sID, int cID) {
        scientistDB.close();
 }
 
-std::list<Scientist> ScientistRepository::connectedScientists(int sID) {
+std::vector<Scientist> ScientistRepository::connectedScientists(int sID) {
 
-    std::list<Scientist> scientist = std::list<Scientist>();
+    std::vector<Scientist> scientist = std::vector<Scientist>();
     Scientist s = Scientist();
     scientistDB = getDatabaseConnection();
     scientistDB.open();

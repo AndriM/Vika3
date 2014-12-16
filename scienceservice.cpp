@@ -60,11 +60,11 @@ void ScienceService::connectScientists(int sID, int cID) {
 void ScienceService::connectComputers(int cID, int sID) {
     computerRepository.connect(cID,sID);
 }
-std::list<Scientist> ScienceService::connectedScientists(int sID) {
+std::vector<Scientist> ScienceService::connectedScientists(int sID) {
     return scientistRepository.connectedScientists(sID);
 }
 
-std::list<Computer> ScienceService::connectedComputers(int cID) {
+std::vector<Computer> ScienceService::connectedComputers(int cID) {
     return computerRepository.connectedComputers(cID);
 }
 

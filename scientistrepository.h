@@ -18,7 +18,7 @@ public:
     std::vector<Scientist> list();
     // Returns a list ordered by column and modifier
     std::vector<Scientist> list(std::string col,std::string mod);
-    std::list<Scientist> connectedScientists(int sID);
+    std::vector<Scientist> connectedScientists(int sID);
     void connect(int sID, int cID);
 private:
     std::vector<Scientist> scientistList;

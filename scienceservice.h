@@ -39,8 +39,8 @@ public:
     //Connections
     void connectScientists(int sID, int cID);
     void connectComputers(int cID, int sID);
-    std::list<Scientist> connectedScientists(int sID);
-    std::list<Computer> connectedComputers(int cID);
+    std::vector<Scientist> connectedScientists(int sID);
+    std::vector<Computer> connectedComputers(int cID);
 private:
     ScientistRepository scientistRepository;
     ComputerRepository computerRepository;

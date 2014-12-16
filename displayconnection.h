@@ -16,8 +16,11 @@ class displayConnection : public QDialog
 public:
     explicit displayConnection(QWidget *parent = 0);
     ~displayConnection();
+    void displayConnectedScientists();
 private slots:
     void on_backButton_clicked();
+    void on_displayButton_clicked();
+
 private:
     void displayAllComputers();
     ScienceService scienceService;
@@ -26,6 +29,7 @@ private:
     std::vector<Computer> currentlyDisplayedComputers;
     std::vector<Scientist> currentScientists;
     std::vector<Scientist> currentlyDisplayedScientists;
+    int ID;
 };
 
 #endif // DISPLAYCONNECTION_H
