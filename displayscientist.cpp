@@ -18,8 +18,7 @@ void displayScientist::displayPhoto(Scientist scientist)
     ui->label_title->setText(QString("<h2>%1</h2>").arg(QString::fromStdString(scientist.getName())));
     ui->byLabel->setText(QString("<h2>%1</h2>").arg(QString::fromStdString(scientist.getDateOfBirth())));
     ui->genderLabel->setText(QString("<h2>%1</h2>").arg(QString::fromStdString(scientist.getGender())));
-    //if death year er empty þa -> Still alive.
-    //else tetta fyrir nedan
+
     if(scientist.getDateOfDeath() == "")
     {
         ui->dyLabel->setText(QString("<h2>%1</h2>").arg(QString::fromStdString("Still Alive")));
