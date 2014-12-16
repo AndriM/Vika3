@@ -1,12 +1,19 @@
 #include "displaysciconnection.h"
 #include "ui_displaysciconnection.h"
 
+
 DisplaySciConnection::DisplaySciConnection(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::DisplaySciConnection)
 {
     ui->setupUi(this);
     displayAllScientists();
+    currentComputers = scienceService.getAllComputers();
+    for(unsigned int i = 0; i < currentComputers.size(); i++)
+    {
+        Computer currentComputer = currentComputers[i];
+        ui->comboBox->addItem(QString::fromStdString(currentComputer.getName()));
+    }
 }
 
 DisplaySciConnection::~DisplaySciConnection()
@@ -49,4 +56,9 @@ void DisplaySciConnection::displayAllScientists()
 void DisplaySciConnection::on_backButton_clicked()
 {
     close();
+}
+
+void DisplaySciConnection::on_comboBox_activated(const QString &arg1)
+{
+
 }

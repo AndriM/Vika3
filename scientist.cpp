@@ -5,6 +5,7 @@ Scientist::Scientist() {
     dateOfBirth = "";
     dateOfDeath = "";
     gender = "";
+    stillAlive = "Still Alive";
 }
 
 std::string Scientist::getName() const
@@ -50,6 +51,16 @@ std::string Scientist::getImagepath() const
 void Scientist::setImagepath(const std::string &value)
 {
     imagePath = value;
+}
+
+std::string Scientist::getStillAlive() const
+{
+    return stillAlive;
+}
+
+void Scientist::setStillAlive()
+{
+    stillAlive = "Still Alive";
 }
 
 int Scientist::getId() const
