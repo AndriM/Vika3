@@ -30,7 +30,8 @@ SOURCES += main.cpp\
     connection.cpp \
     scientistadd.cpp \
     displayconnection.cpp \
-    scientistconnect.cpp
+    scientistconnect.cpp \
+    displaysciconnection.cpp
 
 HEADERS  += mainwindow.h \
     baserepository.h \
@@ -49,7 +50,8 @@ HEADERS  += mainwindow.h \
     connection.h \
     scientistadd.h \
     displayconnection.h \
-    scientistconnect.h
+    scientistconnect.h \
+    displaysciconnection.h
 
 FORMS    += mainwindow.ui \
     scientistbase.ui \
@@ -58,7 +60,8 @@ FORMS    += mainwindow.ui \
     connection.ui \
     scientistadd.ui \
     displayconnection.ui \
-    scientistconnect.ui
+    scientistconnect.ui \
+    displaysciconnection.ui
 
 OTHER_FILES += \
     science_db.sqlite \

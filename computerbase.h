@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include "computeradd.h"
-#include "displayconnection.h"
+#include "displaysciconnection.h"
 #include "connection.h"
 #include "scienceservice.h"
 #include "computer.h"

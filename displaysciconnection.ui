@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>displayConnection</class>
- <widget class="QWidget" name="displayConnection">
+ <class>DisplaySciConnection</class>
+ <widget class="QDialog" name="DisplaySciConnection">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,12 +11,9 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Connections</string>
+   <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="2" column="0">
-    <widget class="QLineEdit" name="lineEdit"/>
-   </item>
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="font">
@@ -31,15 +28,11 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="0">
-    <widget class="QPushButton" name="backButton">
-     <property name="text">
-      <string>Back</string>
-     </property>
-    </widget>
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="lineEdit"/>
    </item>
-   <item row="3" column="0">
-    <widget class="QTableWidget" name="comp_table">
+   <item row="2" column="0">
+    <widget class="QTableWidget" name="sci_table">
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
      </property>
@@ -78,6 +71,13 @@
        <string>Construction Year</string>
       </property>
      </column>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="backButton">
+     <property name="text">
+      <string>Back</string>
+     </property>
     </widget>
    </item>
   </layout>

@@ -25,7 +25,7 @@ void Computerbase::on_addButton_clicked()
 
 void Computerbase::on_button_disp_connected_clicked()
 {
-    displayConnection dispConn;
+    DisplaySciConnection dispConn;
     dispConn.exec();
 }
 
