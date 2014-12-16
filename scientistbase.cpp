@@ -29,12 +29,6 @@ void Scientistbase::on_button_connect_clicked()
     connect.exec();
 }
 
-void Scientistbase::on_button_disp_conn_clicked()
-{
-    displayConnection disConn;
-    disConn.exec();
-}
-
 void Scientistbase::on_backButton_clicked()
 {
     close();
@@ -92,4 +86,10 @@ void Scientistbase::on_removeButton_clicked()
     scienceService.removeScientist(removeID);
     displayAllScientists();
 
+}
+
+void Scientistbase::on_button_disp_conn_clicked()
+{
+    displayConnection dc;
+    dc.exec();
 }

@@ -37,8 +37,8 @@ void DisplaySciConnection::on_backButton_clicked()
 }
 void DisplaySciConnection::on_pushButton_clicked()
 {
-    int row = ui->sci_table->currentRow();
-    ID = ui->sci_table->item(row,0)->text().toInt();
+    int row = ui->comp_table->currentRow();
+    ID = ui->comp_table->item(row,0)->text().toInt();
     scienceService.connectedScientists(ID);
     displayConnectedScientists();
 }

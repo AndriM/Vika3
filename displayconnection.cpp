@@ -49,8 +49,8 @@ void displayConnection::displayConnectedComputers()
 }
 void displayConnection::on_displayButton_clicked()
 {
-    int row = ui->comp_table->currentRow();
-    ID = ui->comp_table->item(row,0)->text().toInt();
+    int row = ui->sci_table->currentRow();
+    ID = ui->sci_table->item(row,0)->text().toInt();
     scienceService.connectedComputers(ID);
     displayConnectedComputers();
 }

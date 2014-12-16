@@ -37,3 +37,8 @@ void displayScientist::displayPhoto(Scientist scientist)
 
     ui->photoLabel->setPixmap(scaledPixMap);
 }
+
+void displayScientist::on_pushButton_clicked()
+{
+    close();
+}
