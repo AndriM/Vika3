@@ -9,20 +9,17 @@
 namespace Ui {
 class DisplaySciConnection;
 }
-
 class DisplaySciConnection : public QDialog
 {
     Q_OBJECT
-
 public:
     explicit DisplaySciConnection(QWidget *parent = 0);
-    ~DisplaySciConnection();    
-    void displayAllScientists();
-    void displayConnectedComputers();
+    ~DisplaySciConnection();
+    void displayAllComputers();
+    void displayConnectedScientists();
 private slots:
     void on_backButton_clicked();
     void on_pushButton_clicked();
-
 private:
     Ui::DisplaySciConnection *ui;
     ScienceService scienceService;
@@ -31,7 +28,5 @@ private:
     std::vector<Computer> currentComputers;
     std::vector<Computer> currentlyDisplayedComputers;
     int ID;
-
 };
-
 #endif // DISPLAYSCICONNECTION_H
