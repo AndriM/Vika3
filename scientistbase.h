@@ -6,6 +6,7 @@
 #include "scientistconnect.h"
 #include "displayconnection.h"
 #include "scienceservice.h"
+#include "displayscientist.h"
 
 namespace Ui {
 class Scientistbase;
@@ -24,6 +25,8 @@ private slots:
     void on_backButton_clicked();
     void displayAllScientists();
     void on_searchLine_textChanged(const QString &arg1);
+    void on_listTable_doubleClicked(const QModelIndex &index);
+
 private:
     Ui::Scientistbase *ui;
     ScienceService scienceService;

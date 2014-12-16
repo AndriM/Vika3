@@ -27,6 +27,8 @@ private slots:
     void on_searchLine_textChanged(const QString &arg1);
 
 
+    void on_listTable_doubleClicked(const QModelIndex &index);
+
 private:
     Ui::Computerbase *ui;
     void getAllComputers();

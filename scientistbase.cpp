@@ -77,3 +77,10 @@ void Scientistbase::on_searchLine_textChanged(const QString &arg1)
 {
     displayAllScientists();
 }
+
+void Scientistbase::on_listTable_doubleClicked(const QModelIndex &index)
+{
+    displayScientist display;
+    display.displayPhoto(currentScientists[index.row()]);
+    display.exec();
+}

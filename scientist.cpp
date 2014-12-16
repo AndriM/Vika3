@@ -95,5 +95,5 @@ std::string Scientist::stringToLower(std::string original)
 
 std::string Scientist::toString()
 {
-    return name + " " + dateOfBirth + " " + dateOfDeath + " " + gender;
+    return name;
 }
