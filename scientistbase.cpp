@@ -20,6 +20,7 @@ void Scientistbase::on_addButton_clicked()
 {
     scientistadd sciAdd;
     sciAdd.exec();
+    displayAllScientists();
 }
 
 void Scientistbase::on_button_connect_clicked()

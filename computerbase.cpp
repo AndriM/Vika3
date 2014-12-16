@@ -20,6 +20,7 @@ void Computerbase::on_addButton_clicked()
 {
     ComputerAdd compAdd;
     compAdd.exec();
+    displayAllComputers();
 }
 
 void Computerbase::on_button_disp_connected_clicked()
