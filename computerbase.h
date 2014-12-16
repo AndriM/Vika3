@@ -29,6 +29,8 @@ private slots:
 
     void on_listTable_doubleClicked(const QModelIndex &index);
 
+    void on_removeButton_clicked();
+
 private:
     Ui::Computerbase *ui;
     void getAllComputers();
@@ -38,7 +40,7 @@ private:
 
     std::vector<Computer> currentComputers;
     std::vector<Computer> currentlyDisplayedComputers;
-    //Computerbase computerbase;
+    int removeID;
 };
 
 #endif // COMPUTERBASE_H

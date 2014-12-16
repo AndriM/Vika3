@@ -86,3 +86,11 @@ void Computerbase::on_listTable_doubleClicked(const QModelIndex &index)
 {
     //opna nyjan glugga með mynd og upplysingum
 }
+
+void Computerbase::on_removeButton_clicked()
+{
+    int row = ui->listTable->currentRow();
+    removeID = ui->listTable->item(row,4)->text().toInt();
+    scienceService.removeComputer(removeID);
+    close();
+}

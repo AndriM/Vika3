@@ -32,13 +32,10 @@ void ScientistRepository::remove(int id) {
     query.bindValue(":id", QString::number(id));
     query.exec();
 
-    qDebug() << query.lastError().text();
-
     query.prepare("DELETE FROM Joined WHERE s_ID = :id");
     query.bindValue(":id", QString::number(id));
     query.exec();
 
-    qDebug() << query.lastError().text();
 
 }
 

@@ -19,18 +19,16 @@ void ComputerRepository::add(Computer computer) {
     query.exec();
 }
 
-void ComputerRepository::remove(std::string id) {
+void ComputerRepository::remove(int id) {
+
     QSqlQuery query(db);
-
-    query.prepare("DELETE FROM Computers WHERE id = :id");
-    query.bindValue(":id", std::atoi(id.c_str()));
-
+    query.clear();
+    query.prepare("DELETE FROM Computers WHERE ID = :id");
+    query.bindValue(":id", QString::number(id));
     query.exec();
 
-    query.prepare("DELETE FROM ScientistComputerConnections WHERE c_ID = :id");
-
-    query.bindValue(":id", std::atoi(id.c_str()));
-
+    query.prepare("DELETE FROM Joined WHERE c_ID = :id");
+    query.bindValue(":id", QString::number(id));
     query.exec();
 }
 

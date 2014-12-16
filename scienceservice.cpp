@@ -33,7 +33,7 @@ void ScienceService::addComputer(Computer computer)
     computerRepository.add(computer);
 }
 
-void ScienceService::removeComputer(std::string id)
+void ScienceService::removeComputer(int id)
 {
     computerRepository.remove(id);
 }

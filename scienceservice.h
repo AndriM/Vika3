@@ -25,7 +25,7 @@ public:
 
     //Computers
     void addComputer(Computer computer);
-    void removeComputer(std::string id);
+    void removeComputer(int id);
     //std::vector<Computer> searchComputer(std::string searchTerm);
     std::vector<Computer> getAllComputers();
     std::vector<Computer> getComputersOrderedBy(std::string col,std::string mod);

@@ -15,7 +15,7 @@ public:
     ~ComputerRepository();
 
     void add(Computer);
-    void remove(std::string id);
+    void remove(int id);
     //std::vector<Computer> search(std::string searchTerm);
     std::vector<Computer> list();
     // Returns a list ordered by column and modifier
