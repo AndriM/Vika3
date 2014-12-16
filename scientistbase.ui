@@ -30,6 +30,9 @@
    </item>
    <item row="7" column="0" colspan="2">
     <widget class="QPushButton" name="button_connect">
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="text">
       <string>Connect computers</string>
      </property>
@@ -40,6 +43,9 @@
    </item>
    <item row="8" column="0" colspan="2">
     <widget class="QPushButton" name="backButton">
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="text">
       <string>Back</string>
      </property>
@@ -60,6 +66,9 @@
    </item>
    <item row="8" column="3">
     <widget class="QPushButton" name="addButton">
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="text">
       <string>Add</string>
      </property>
@@ -67,6 +76,9 @@
    </item>
    <item row="7" column="2" colspan="2">
     <widget class="QPushButton" name="button_disp_conn">
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="text">
       <string>   Display connections    </string>
      </property>
@@ -131,6 +143,14 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>searchLine</tabstop>
+  <tabstop>listTable</tabstop>
+  <tabstop>button_connect</tabstop>
+  <tabstop>button_disp_conn</tabstop>
+  <tabstop>backButton</tabstop>
+  <tabstop>addButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

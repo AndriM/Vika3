@@ -10,10 +10,20 @@
     <height>322</height>
    </rect>
   </property>
+  <property name="focusPolicy">
+   <enum>Qt::NoFocus</enum>
+  </property>
   <property name="windowTitle">
    <string>Add</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="6" column="0">
+    <widget class="QRadioButton" name="builtyes">
+     <property name="text">
+      <string>Yes</string>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="0">
     <widget class="QLabel" name="addCompLabel">
      <property name="font">
@@ -31,23 +41,33 @@
    <item row="4" column="0" colspan="2">
     <widget class="QLineEdit" name="comptype"/>
    </item>
-   <item row="2" column="0" colspan="2">
-    <widget class="QLineEdit" name="compname"/>
-   </item>
-   <item row="6" column="1">
-    <widget class="QLineEdit" name="yearLine"/>
-   </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="nameComp">
+   <item row="3" column="0">
+    <widget class="QLabel" name="typeComp">
      <property name="text">
-      <string>Name of computer:</string>
+      <string>Type:</string>
      </property>
     </widget>
    </item>
-   <item row="6" column="0">
-    <widget class="QRadioButton" name="builtyes">
+   <item row="8" column="0">
+    <widget class="QPushButton" name="back">
+     <property name="maximumSize">
+      <size>
+       <width>183</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="text">
-      <string>Yes</string>
+      <string>Back</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLabel" name="conyearLabel">
+     <property name="text">
+      <string>Construction year:</string>
      </property>
     </widget>
    </item>
@@ -65,35 +85,24 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="1">
-    <widget class="QLabel" name="conyearLabel">
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="yearLine"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="nameComp">
      <property name="text">
-      <string>Construction year:</string>
+      <string>Name of computer:</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="typeComp">
-     <property name="text">
-      <string>Type:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="0">
-    <widget class="QPushButton" name="back">
-     <property name="maximumSize">
-      <size>
-       <width>183</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="text">
-      <string>Back</string>
-     </property>
-    </widget>
+   <item row="2" column="0" colspan="2">
+    <widget class="QLineEdit" name="compname"/>
    </item>
    <item row="8" column="1">
     <widget class="QPushButton" name="addButton">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="minimumSize">
       <size>
        <width>203</width>
@@ -106,6 +115,9 @@
        <height>16777215</height>
       </size>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="text">
       <string>Add</string>
      </property>
@@ -113,6 +125,14 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>compname</tabstop>
+  <tabstop>comptype</tabstop>
+  <tabstop>builtyes</tabstop>
+  <tabstop>builtno</tabstop>
+  <tabstop>yearLine</tabstop>
+  <tabstop>addButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
