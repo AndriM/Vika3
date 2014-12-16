@@ -64,16 +64,12 @@ void scientistadd::on_checkBox_toggled(bool checked)
     else
     {
         ui->dyLine->setEnabled(true);
-        if(ui->dyLine->text().isEmpty())
-        {
-            QMessageBox::warning(this,"Error input.", " Death year is empty!");
-        }
     }
 }
 
 void scientistadd::on_addButton_clicked()
 {
-    if(nameLineValid() && yearOfBirthValid() && deathYearValid())
+    if(nameLineValid() && yearOfBirthValid())
     {
     Scientist newScientist = getScientist();
     scienceService.addScientist(newScientist);
@@ -106,12 +102,7 @@ bool scientistadd::nameLineValid()
         QMessageBox::warning(this,"Error input.", " Name line is empty!");
         return false;
     }
-   /* if(ui->nameLine->text().isDigit())
-    {
-        QMessageBox::warning(this,"Error input.", " Name line cannot contain a digit");
-        return false;
-    }*/
-    
+
     return true;
 }
 bool scientistadd::yearOfBirthValid()
@@ -122,32 +113,7 @@ bool scientistadd::yearOfBirthValid()
         QMessageBox::warning(this,"Error input.", " Birth year is empty!");
         return false;
     }
-    /*if(ui->byLine->text().isAlpha())
-    {
-        QMessageBox::warning(this,"Error input.", " Birth year cannot contain a alpha");
-        return false;
-    }*/
     
     return true;
     
 }
-bool scientistadd::deathYearValid()
-{
-    
-    /*if(ui->dyLine->text().isEmpty())
-    {
-        QMessageBox::warning(this,"Error input.", " Death year is empty!");
-        return false;
-    }*/
-    /*if(ui->dyLine->text().isAlpha())
-    {
-        QMessageBox::warning(this,"Error input.", " Death year cannot contain a alpha");
-        return false;
-    }*/
-    
-    return true;
-}
-/*bool genderValid()
-{
-    
-}*/

@@ -4,6 +4,7 @@
 #include "computer.h"
 #include "scienceservice.h"
 #include <QDialog>
+#include <QMessageBox>
 
 namespace Ui {
 class ComputerAdd;
@@ -17,6 +18,8 @@ public:
     explicit ComputerAdd(QWidget *parent = 0);
     ~ComputerAdd();
     Computer getComputer();
+    bool typeValid();
+    bool nameLineValid();
 private slots:
     void on_compname_textChanged(const QString &arg1);
     void on_comptype_textChanged(const QString &arg1);

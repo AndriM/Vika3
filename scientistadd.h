@@ -24,8 +24,7 @@ public:
     Scientist getScientist();
     bool nameLineValid();
     bool yearOfBirthValid();
-    bool deathYearValid();
-//    bool genderValid();
+
 private slots:
     void on_nameLine_textChanged(const QString &arg1);
     void on_byLine_textChanged(const QString &arg1);
