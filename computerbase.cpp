@@ -46,7 +46,7 @@ void Computerbase::getAllComputers()
 
 void Computerbase::displayAllComputers()
 {
-    ui->listTable->clear();
+    ui->listTable->clearContents();
     currentComputers = scienceService.getAllComputers();
     ui->listTable->setRowCount(currentComputers.size());
     currentlyDisplayedComputers.clear();

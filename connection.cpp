@@ -8,6 +8,8 @@ connection::connection(QWidget *parent) :
     ui->setupUi(this);
     displayAllComputers();
     displayAllScientists();
+    currentIDcomputer = 0;
+    currentIDscientist = 0;
 }
 
 connection::~connection()
@@ -22,7 +24,7 @@ void connection::on_backButton_clicked()
 
 void connection::on_connectButton_clicked()
 {
-    //setja inn koda fyrir tengingu comp-scientist
+    scienceService.connectComputers(currentIDcomputer, currentIDscientist);
     close();
 }
 
@@ -68,3 +70,17 @@ void connection::displayAllComputers()
         currentlyDisplayedComputers.push_back(currentComputer);
     }
 }
+
+void connection::on_comp_table_clicked(const QModelIndex &index)
+{
+    int row = ui->comp_table->currentRow();
+    currentIDcomputer = ui->comp_table->item(row,0)->text().toInt();
+}
+
+
+void connection::on_sci_table_clicked(const QModelIndex &index)
+{
+    int row = ui->sci_table->currentRow();
+    currentIDscientist = ui->sci_table->item(row,0)->text().toInt();
+}
+
