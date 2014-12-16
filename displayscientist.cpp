@@ -17,7 +17,7 @@ void displayScientist::displayPhoto(Scientist scientist)
 {
     ui->label_title->setText(QString("<h2>%1</h2>").arg(QString::fromStdString(scientist.toString())));
 
-    QPixmap pixmap(QString::fromStdString(newscientist.getImagepath()));
+    QPixmap pixmap(QString::fromStdString(scientist.getImagepath()));
 
     int imageLabelWidth = ui->photoLabel->width();
     QPixmap scaledPixMap = pixmap.scaledToWidth(imageLabelWidth);
