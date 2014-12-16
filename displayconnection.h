@@ -2,6 +2,8 @@
 #define DISPLAYCONNECTION_H
 
 #include <QDialog>
+#include "computer.h"
+#include "scienceservice.h"
 
 namespace Ui {
 class displayConnection;
@@ -16,7 +18,11 @@ public:
 private slots:
     void on_backButton_clicked();
 private:
+    void displayAllComputers();
+    ScienceService scienceService;
     Ui::displayConnection *ui;
+    std::vector<Computer> currentComputers;
+    std::vector<Computer> currentlyDisplayedComputers;
 };
 
 #endif // DISPLAYCONNECTION_H
