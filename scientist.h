@@ -26,6 +26,9 @@ public:
     std::string getImagepath() const;
     void setImagepath(const std::string &value);
 
+    std::string getStillAlive() const;
+    void setStillAlive();
+
     std::string toString();
     bool contains(std::string str);
     std::string stringToLower(std::string original);
@@ -36,6 +39,7 @@ public:
     std::string dateOfDeath;
     std::string gender;
     std::string imagePath;
+    std::string stillAlive;
 };
 
 #endif // SCIENTIST_H

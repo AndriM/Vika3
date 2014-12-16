@@ -15,7 +15,21 @@ displayScientist::~displayScientist()
 
 void displayScientist::displayPhoto(Scientist scientist)
 {
-    ui->label_title->setText(QString("<h2>%1</h2>").arg(QString::fromStdString(scientist.toString())));
+    ui->label_title->setText(QString("<h2>%1</h2>").arg(QString::fromStdString(scientist.getName())));
+    ui->byLabel->setText(QString("<h2>%1</h2>").arg(QString::fromStdString(scientist.getDateOfBirth())));
+    ui->genderLabel->setText(QString("<h2>%1</h2>").arg(QString::fromStdString(scientist.getGender())));
+    //if death year er empty þa -> Still alive.
+    //else tetta fyrir nedan
+    if(scientist.getDateOfDeath() == "")
+    {
+        ui->dyLabel->setText(QString("<h2>%1</h2>").arg(QString::fromStdString("Still Alive")));
+    }
+    else
+    {
+        ui->dyLabel->setText(QString("<h2>%1</h2>").arg(QString::fromStdString(scientist.getDateOfDeath())));
+    }
+    ui->ybLabel->setText(QString("<h3>%1</h3>").arg(QString::fromStdString("Year of birth:")));
+    ui->ydLabel->setText(QString("<h3>%1</h3>").arg(QString::fromStdString("Year of death:")));
 
     QPixmap pixmap(QString::fromStdString(scientist.getImagepath()));
 
