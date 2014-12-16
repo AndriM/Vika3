@@ -90,5 +90,6 @@ void Scientistbase::on_removeButton_clicked()
     int row = ui->listTable->currentRow();
     removeID = ui->listTable->item(row,4)->text().toInt();
     scienceService.removeScientist(removeID);
-    close();
+    displayAllScientists();
+
 }

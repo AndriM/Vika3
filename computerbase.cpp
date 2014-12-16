@@ -63,6 +63,7 @@ void Computerbase::displayAllComputers()
             QString ComputeryearBuilt = QString::fromStdString(currentComputer.getYearBuilt());
             QString Computertype = QString::fromStdString(currentComputer.getType());
             QString ComputerwasBuilt = QString::fromStdString(currentComputer.getWasBuilt());
+            QString ComputerID = QString::number(currentComputer.getId());
 
             int currentRow = currentlyDisplayedComputers.size();
 
@@ -70,7 +71,7 @@ void Computerbase::displayAllComputers()
             ui->listTable->setItem(currentRow, 1, new QTableWidgetItem(Computertype));
             ui->listTable->setItem(currentRow, 2, new QTableWidgetItem(ComputerwasBuilt));
             ui->listTable->setItem(currentRow, 3, new QTableWidgetItem(ComputeryearBuilt));
-
+            ui->listTable->setItem(currentRow, 4, new QTableWidgetItem((ComputerID)));
             currentlyDisplayedComputers.push_back(currentComputer);
         }
     }
@@ -92,5 +93,5 @@ void Computerbase::on_removeButton_clicked()
     int row = ui->listTable->currentRow();
     removeID = ui->listTable->item(row,4)->text().toInt();
     scienceService.removeComputer(removeID);
-    close();
+    displayAllComputers();
 }

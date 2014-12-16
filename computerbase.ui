@@ -105,10 +105,18 @@
        <string>Construction Year</string>
       </property>
      </column>
+     <column>
+      <property name="text">
+       <string>ID</string>
+      </property>
+     </column>
     </widget>
    </item>
    <item row="5" column="2">
     <widget class="QPushButton" name="removeButton">
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="text">
       <string>Remove</string>
      </property>

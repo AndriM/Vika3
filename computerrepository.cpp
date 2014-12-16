@@ -27,9 +27,11 @@ void ComputerRepository::remove(int id) {
     query.bindValue(":id", QString::number(id));
     query.exec();
 
+
     query.prepare("DELETE FROM Joined WHERE c_ID = :id");
     query.bindValue(":id", QString::number(id));
     query.exec();
+
 }
 
 std::vector<Computer> ComputerRepository::list() {
