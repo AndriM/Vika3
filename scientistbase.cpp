@@ -58,20 +58,20 @@ void Scientistbase::displayAllScientists()
             QString scientistDateOfBirth = QString::fromStdString(currentScientist.getDateOfBirth());
             QString scientistDateOfDeath = QString::fromStdString(currentScientist.getDateOfDeath());
             QString scientistGender = QString::fromStdString(currentScientist.getGender());
-
+            QString scientistID = QString::number(currentScientist.getId());
             int currentRow = currentlyDisplayedScientists.size();
 
             ui->listTable->setItem(currentRow, 0, new QTableWidgetItem(scientistName));
             ui->listTable->setItem(currentRow, 1, new QTableWidgetItem(scientistDateOfBirth));
             ui->listTable->setItem(currentRow, 2, new QTableWidgetItem(scientistDateOfDeath));
             ui->listTable->setItem(currentRow, 3, new QTableWidgetItem(scientistGender));
+            ui->listTable->setItem(currentRow, 4, new QTableWidgetItem(scientistID));
 
             currentlyDisplayedScientists.push_back(currentScientist);
         }
     }
     ui->listTable->setRowCount(currentlyDisplayedScientists.size());
 }
-
 
 void Scientistbase::on_searchLine_textChanged(const QString &arg1)
 {
@@ -83,4 +83,12 @@ void Scientistbase::on_listTable_doubleClicked(const QModelIndex &index)
     displayScientist display;
     display.displayPhoto(currentScientists[index.row()]);
     display.exec();
+}
+
+void Scientistbase::on_removeButton_clicked()
+{
+    int row = ui->listTable->currentRow();
+    removeID = ui->listTable->item(row,4)->text().toInt();
+    scienceService.removeScientist(removeID);
+    close();
 }

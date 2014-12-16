@@ -36,10 +36,7 @@ void scientistadd::on_byLine_textChanged(const QString &arg1)
 
 void scientistadd::on_dyLine_textChanged(const QString &arg1)
 {
-    if(deathYearValid())
-    {
-        newScientist.dateOfDeath = ui->dyLine->text().toStdString();
-    }
+    newScientist.dateOfDeath = ui->dyLine->text().toStdString();
 }
 
 void scientistadd::on_maleRadio_toggled(bool checked)
@@ -67,6 +64,10 @@ void scientistadd::on_checkBox_toggled(bool checked)
     else
     {
         ui->dyLine->setEnabled(true);
+        if(ui->dyLine->text().isEmpty())
+        {
+            QMessageBox::warning(this,"Error input.", " Death year is empty!");
+        }
     }
 }
 
@@ -133,11 +134,11 @@ bool scientistadd::yearOfBirthValid()
 bool scientistadd::deathYearValid()
 {
     
-    if(ui->dyLine->text().isEmpty())
+    /*if(ui->dyLine->text().isEmpty())
     {
         QMessageBox::warning(this,"Error input.", " Death year is empty!");
         return false;
-    }
+    }*/
     /*if(ui->dyLine->text().isAlpha())
     {
         QMessageBox::warning(this,"Error input.", " Death year cannot contain a alpha");

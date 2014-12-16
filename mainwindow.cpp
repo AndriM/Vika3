@@ -39,3 +39,8 @@ void MainWindow::addScientist()
     Scientist newScientist = sciadd.getScientist();
     scienceService.addScientist(newScientist);
 }
+
+void MainWindow::on_exitButton_clicked()
+{
+    close();
+}

@@ -2,6 +2,7 @@
 #include <stdexcept>
 #include <string>
 #include <iostream>
+#include <QDebug>
 
 ScientistRepository::ScientistRepository() {
     createConnection();
@@ -23,18 +24,22 @@ void ScientistRepository::add(Scientist scientist) {
     query.exec();
 }
 
-void ScientistRepository::remove(std::string id) {
+void ScientistRepository::remove(int id) {
+
     QSqlQuery query(db);
-
-    query.prepare("DELETE FROM Scientists WHERE id = :id");
-    query.bindValue(":id", std::atoi(id.c_str()));
-
+    query.clear();
+    query.prepare("DELETE FROM Scientists WHERE ID = :id");
+    query.bindValue(":id", QString::number(id));
     query.exec();
 
-    query.prepare("DELETE FROM ScientistComputerConnections WHERE s_ID = :id");
-    query.bindValue(":id", std::atoi(id.c_str()));
+    qDebug() << query.lastError().text();
 
+    query.prepare("DELETE FROM Joined WHERE s_ID = :id");
+    query.bindValue(":id", QString::number(id));
     query.exec();
+
+    qDebug() << query.lastError().text();
+
 }
 
 std::vector<Scientist> ScientistRepository::list() {

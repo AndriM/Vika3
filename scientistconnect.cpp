@@ -70,8 +70,6 @@ void scientistConnect::displayAllComputers()
         currentlyDisplayedComputers.push_back(currentComputer);
     }
 }
-
-
 void scientistConnect::on_sci_table_clicked(const QModelIndex &index)
 {
     int row = ui->sci_table->currentRow();

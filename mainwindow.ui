@@ -7,8 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>412</width>
-    <height>368</height>
+    <height>406</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Opening Page</string>
@@ -16,16 +21,23 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="chooseBetweenLabel">
+     <widget class="QLabel" name="welcomeLabel">
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <pointsize>13</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
       <property name="text">
-       <string>Choose:</string>
+       <string>WELCOME TO OUR DATABASE OF FAMOUS SCIENTISTS</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="chooseLabel">
+      <property name="text">
+       <string>Please choose:</string>
       </property>
      </widget>
     </item>
@@ -86,6 +98,13 @@
       </property>
       <property name="flat">
        <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolButton" name="exitButton">
+      <property name="text">
+       <string>EXIT</string>
       </property>
      </widget>
     </item>

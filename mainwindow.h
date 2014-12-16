@@ -24,6 +24,8 @@ public:
 private slots:
     void on_pushButtonComputer_clicked();
     void on_pushButtonScientist_clicked();
+    void on_exitButton_clicked();
+
 private:
     ScienceService scienceService;
     Ui::MainWindow *ui;

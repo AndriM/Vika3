@@ -190,7 +190,7 @@ void ConsoleUI::handleDeleteScientist(){
     std::string idToDelete = "";
     std::cout << "Enter the id of the scientist to delete: ";
     std::cin >> idToDelete;
-    scienceService.removeScientist(idToDelete);
+    //scienceService.removeScientist(idToDelete);
     clear();
 }
 
@@ -199,7 +199,7 @@ void ConsoleUI::handleDeleteComputer(){
     std::string idToDelete = "";
     std::cout << "Enter the id of the computer to delete: ";
     std::cin >> idToDelete;
-    scienceService.removeComputer(idToDelete);
+    //scienceService.removeComputer(idToDelete);
     clear();
 }
 

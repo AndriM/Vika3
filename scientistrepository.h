@@ -13,7 +13,7 @@ public:
     ~ScientistRepository();
 
     void add(Scientist);
-    void remove(std::string id);
+    void remove(int id);
     //std::vector<Scientist> search(std::string searchTerm);
     std::vector<Scientist> list();
     // Returns a list ordered by column and modifier

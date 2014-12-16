@@ -18,6 +18,7 @@ class Scientistbase : public QDialog
 public:
     explicit Scientistbase(QWidget *parent = 0);
     ~Scientistbase();
+    Scientistbase SomethingFunction(QPoint &PosNafn);
 private slots:
     void on_addButton_clicked();
     void on_button_connect_clicked();
@@ -27,11 +28,14 @@ private slots:
     void on_searchLine_textChanged(const QString &arg1);
     void on_listTable_doubleClicked(const QModelIndex &index);
 
+    void on_removeButton_clicked();
+
 private:
     Ui::Scientistbase *ui;
     ScienceService scienceService;
     std::vector<Scientist> currentScientists;
     std::vector<Scientist> currentlyDisplayedScientists;
+    int removeID;
 };
 
 #endif // SCIENTISTBASE_H

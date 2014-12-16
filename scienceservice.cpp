@@ -11,7 +11,8 @@ void ScienceService::addScientist(Scientist scientist) {
     scientistRepository.add(scientist);
 }
 
-void ScienceService::removeScientist(std::string id) {
+void ScienceService::removeScientist(int id) {
+    std::cout << id;
     scientistRepository.remove(id);
 }
 
