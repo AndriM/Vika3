@@ -13,6 +13,7 @@ DisplaySciConnection::DisplaySciConnection(QWidget *parent) :
     {
         Computer currentComputer = currentComputers[i];
         ui->comboBox->addItem(QString::fromStdString(currentComputer.getName()));
+       // ui->comboBox->itemData(0, )
     }
 }
 
@@ -61,4 +62,30 @@ void DisplaySciConnection::on_backButton_clicked()
 void DisplaySciConnection::on_comboBox_activated(const QString &arg1)
 {
 
+}
+
+void DisplaySciConnection::on_comboBox_currentTextChanged(const QString &arg1)
+{
+//    Computer currentComputer;
+//    currentComputers = scienceService.getAllComputers();
+//    //for(unsigned int i = 0; i < currentComputers.size(); i++)
+//    //{
+//        //Computer currentComputer = currentComputers[i];
+//        //compID = ui->comboBox->property(QString::number(currentComputer.getId()));
+//        //ui->comboBox->addItem(QString::fromStdString(currentComputer.getName()));
+//        compID = ui->comboBox->property(currentComputer.getId()).toInt();
+//        scienceService.connectedComputers(compID);
+//    //}
+}
+
+void DisplaySciConnection::on_comboBox_currentIndexChanged(int index)
+{
+//    Computer currentComputer;
+//    currentComputers = scienceService.getAllComputers();
+//    for(unsigned int i = 0; i < currentComputers.size(); i++)
+//    {
+//        Computer currentComputer = currentComputers[i];
+//        compID = ui->comboBox->currentData(currentComputer.getId());
+//        scienceService.connectedComputers(compID);
+//    }
 }

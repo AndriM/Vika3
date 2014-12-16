@@ -23,6 +23,10 @@ private slots:
 
     void on_comboBox_activated(const QString &arg1);
 
+    void on_comboBox_currentTextChanged(const QString &arg1);
+
+    void on_comboBox_currentIndexChanged(int index);
+
 private:
     Ui::DisplaySciConnection *ui;
     ScienceService scienceService;
@@ -30,6 +34,7 @@ private:
     std::vector<Scientist> currentlyDisplayedScientists;
     std::vector<Computer> currentComputers;
     std::vector<Computer> currentlyDisplayedComputers;
+    int compID;
 
 };
 
