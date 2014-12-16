@@ -28,9 +28,6 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QLineEdit" name="lineEdit"/>
-   </item>
    <item row="2" column="0">
     <widget class="QTableWidget" name="sci_table">
      <property name="editTriggers">
@@ -58,17 +55,17 @@
      </column>
      <column>
       <property name="text">
-       <string>Type</string>
+       <string>Birth year</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Constructed</string>
+       <string>Death year</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Construction Year</string>
+       <string>Gender</string>
       </property>
      </column>
     </widget>
@@ -77,6 +74,16 @@
     <widget class="QPushButton" name="backButton">
      <property name="text">
       <string>Back</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QComboBox" name="comboBox">
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>16777215</height>
+      </size>
      </property>
     </widget>
    </item>

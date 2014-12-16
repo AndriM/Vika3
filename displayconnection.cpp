@@ -7,6 +7,12 @@ displayConnection::displayConnection(QWidget *parent) :
 {
     ui->setupUi(this);
     displayAllComputers();
+    currentScientists = scienceService.getAllScientists();
+    for(unsigned int i = 0; i < currentScientists.size(); i++)
+    {
+        Scientist currentScientist = currentScientists[i];
+        ui->comboBox->addItem(QString::fromStdString(currentScientist.getName()));
+    }
 }
 
 displayConnection::~displayConnection()

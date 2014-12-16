@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "scientist.h"
+#include "computer.h"
 #include "scienceservice.h"
 
 namespace Ui {
@@ -20,11 +21,16 @@ public:
 private slots:
     void on_backButton_clicked();
 
+    void on_comboBox_activated(const QString &arg1);
+
 private:
     Ui::DisplaySciConnection *ui;
     ScienceService scienceService;
     std::vector<Scientist> currentScientists;
     std::vector<Scientist> currentlyDisplayedScientists;
+    std::vector<Computer> currentComputers;
+    std::vector<Computer> currentlyDisplayedComputers;
+
 };
 
 #endif // DISPLAYSCICONNECTION_H

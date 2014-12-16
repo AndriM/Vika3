@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "computer.h"
+#include "scientist.h"
 #include "scienceservice.h"
 
 namespace Ui {
@@ -23,6 +24,8 @@ private:
     Ui::displayConnection *ui;
     std::vector<Computer> currentComputers;
     std::vector<Computer> currentlyDisplayedComputers;
+    std::vector<Scientist> currentScientists;
+    std::vector<Scientist> currentlyDisplayedScientists;
 };
 
 #endif // DISPLAYCONNECTION_H
