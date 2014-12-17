@@ -11,13 +11,10 @@ public:
 
     std::string getName() const;
     void setName(const std::string &value);
-
     std::string getYearBuilt() const;
     void setYearBuilt(const std::string &value);
-
     std::string getType() const;
     void setType(std::string value);
-
     std::string getWasBuilt() const;
     void setWasBuilt(std::string value);
 

@@ -1,5 +1,6 @@
 #include "displayconnection.h"
 #include "ui_displayconnection.h"
+
 displayConnection::displayConnection(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::displayConnection)
@@ -8,14 +9,17 @@ displayConnection::displayConnection(QWidget *parent) :
     displayAllScientists();
     currentScientists = scienceService.getAllScientists();
 }
+
 displayConnection::~displayConnection()
 {
     delete ui;
 }
+
 void displayConnection::on_backButton_clicked()
 {
     close();
 }
+
 void displayConnection::displayConnectedComputers()
 {
     ui->comp_table->clearContents();
@@ -33,6 +37,7 @@ void displayConnection::displayConnectedComputers()
 
     ui->comp_table->setRowCount(currentlyDisplayedComputers.size());
 }
+
 void displayConnection::on_displayButton_clicked()
 {
     int row = ui->sci_table->currentRow();
@@ -40,6 +45,7 @@ void displayConnection::on_displayButton_clicked()
     scienceService.connectedComputers(ID);
     displayConnectedComputers();
 }
+
 void displayConnection::displayAllScientists()
 {
     ui->sci_table->clearContents();

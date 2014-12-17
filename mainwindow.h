@@ -11,11 +11,9 @@
 namespace Ui {
 class MainWindow;
 }
-
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
@@ -25,7 +23,6 @@ private slots:
     void on_pushButtonComputer_clicked();
     void on_pushButtonScientist_clicked();
     void on_exitButton_clicked();
-
 private:
     ScienceService scienceService;
     Ui::MainWindow *ui;

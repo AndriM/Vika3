@@ -13,7 +13,6 @@ class ComputerAdd;
 class ComputerAdd : public QDialog
 {
     Q_OBJECT
-
 public:
     explicit ComputerAdd(QWidget *parent = 0);
     ~ComputerAdd();
@@ -27,9 +26,7 @@ private slots:
     void on_addButton_clicked();
     void on_back_clicked();
     void on_builtno_toggled(bool checked);
-
     void on_builtyes_clicked();
-
 private:
     Ui::ComputerAdd *ui;
     Computer newComputer;

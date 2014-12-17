@@ -2,8 +2,8 @@
 
 Computer::Computer()
 {
-
 }
+
 int Computer::getId() const
 {
     return id;
@@ -13,6 +13,7 @@ void Computer::setId(int value)
 {
     id = value;
 }
+
 std::string Computer::getName() const
 {
     return name;
@@ -22,6 +23,7 @@ void Computer::setName(const std::string &value)
 {
     name = value;
 }
+
 std::string Computer::getYearBuilt() const
 {
     return yearBuilt;
@@ -31,6 +33,7 @@ void Computer::setYearBuilt(const std::string &value)
 {
     yearBuilt = value;
 }
+
 std::string Computer::getType() const
 {
     return type;
@@ -40,6 +43,7 @@ void Computer::setType(std::string value)
 {
     type = value;
 }
+
 std::string Computer::getWasBuilt() const
 {
     return wasBuilt;
@@ -49,6 +53,7 @@ void Computer::setWasBuilt(std::string value)
 {
     wasBuilt = value;
 }
+
 bool Computer::contains(std::string str)
 {
     if(str == "")
@@ -76,7 +81,6 @@ std::string Computer::stringToLower(std::string original)
     {
         result += std::tolower(original[i]);
     }
-
     return result;
 }
 

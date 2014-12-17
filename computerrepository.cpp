@@ -1,13 +1,16 @@
 #include "computerrepository.h"
 
-ComputerRepository::ComputerRepository() {
+ComputerRepository::ComputerRepository()
+{
     createConnection();
 }
 
-ComputerRepository::~ComputerRepository() {
+ComputerRepository::~ComputerRepository()
+{
 }
 
-void ComputerRepository::add(Computer computer) {
+void ComputerRepository::add(Computer computer)
+{
 
     QSqlQuery query(db);
     query.prepare("INSERT INTO Computers (Name, Type, Constructed, ConstructionYear) VALUES (:name,:type,:wb,:yb)");
@@ -19,7 +22,8 @@ void ComputerRepository::add(Computer computer) {
     query.exec();
 }
 
-void ComputerRepository::remove(int id) {
+void ComputerRepository::remove(int id)
+{
 
     QSqlQuery query(db);
     query.clear();
@@ -34,20 +38,22 @@ void ComputerRepository::remove(int id) {
 
 }
 
-std::vector<Computer> ComputerRepository::list() {
+std::vector<Computer> ComputerRepository::list()
+{
     return list("","");
 }
 
-std::vector<Computer> ComputerRepository::list(std::string col, std::string mod) {
+std::vector<Computer> ComputerRepository::list(std::string col, std::string mod)
+{
     std::vector<Computer> computerList = std::vector<Computer>();
 
     QSqlQuery query(db);
     std::string orderBy = "";
 
-    if(!col.empty()){
+    if(!col.empty())
+    {
         mod = mod.empty() ? "ASC" : (mod.find("desc") != std::string::npos ? "DESC" : "ASC");
         orderBy = "order by " + col + " " + mod;
-
     }
     query.exec("SELECT * FROM Computers " + QString::fromStdString(orderBy));
 
@@ -57,8 +63,10 @@ std::vector<Computer> ComputerRepository::list(std::string col, std::string mod)
 
 }
 
-void ComputerRepository::populateComputerList(std::vector<Computer> &computerList, QSqlQuery query){
-    while(query.next()){
+void ComputerRepository::populateComputerList(std::vector<Computer> &computerList, QSqlQuery query)
+{
+    while(query.next())
+    {
         Computer c = Computer();
         c.setId(query.value("ID").toInt());
         c.setName(query.value("Name").toString().toStdString());
@@ -69,7 +77,9 @@ void ComputerRepository::populateComputerList(std::vector<Computer> &computerLis
         computerList.push_back(c);
     }
 }
-void ComputerRepository::connect(int cID, int sID) {
+
+void ComputerRepository::connect(int cID, int sID)
+{
 
             computerDB = getDatabaseConnection();
             computerDB.open();
@@ -82,7 +92,8 @@ void ComputerRepository::connect(int cID, int sID) {
            computerDB.close();
 }
 
-std::vector<Computer> ComputerRepository::connectedComputers(int cID) {
+std::vector<Computer> ComputerRepository::connectedComputers(int cID)
+{
 
     std::vector<Computer> comp = std::vector<Computer>();
     Computer c = Computer();
@@ -94,13 +105,12 @@ std::vector<Computer> ComputerRepository::connectedComputers(int cID) {
     query.exec(QString("SELECT ID, Name FROM Computers JOIN Joined ON Joined.c_ID = Computers.ID WHERE Joined.s_ID = %1")
                       .arg(cID));
 
-    while(query.next()){
+    while(query.next())
+    {
         c.name                    = query.value("Name").toString().toStdString();
-
         comp.push_back(c);
     }
-        computerDB.close();
-
+    computerDB.close();
     return comp;
 }
 

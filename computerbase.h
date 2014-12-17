@@ -18,7 +18,6 @@ class Computerbase : public QDialog
 public:
     explicit Computerbase(QWidget *parent = 0);
     ~Computerbase();
-
 private slots:
     void on_addButton_clicked();
     void on_button_disp_connected_clicked();
@@ -26,14 +25,12 @@ private slots:
     void on_backButton_clicked();
     void on_searchLine_textChanged(const QString &arg1);
     void on_removeButton_clicked();
-
 private:
     Ui::Computerbase *ui;
     void getAllComputers();
     void displayAllComputers();
 
     ScienceService scienceService;
-
     std::vector<Computer> currentComputers;
     std::vector<Computer> currentlyDisplayedComputers;
     int removeID;

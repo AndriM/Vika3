@@ -3,7 +3,6 @@
 
 #include "baserepository.h"
 #include "computer.h"
-
 #include <stdexcept>
 #include <iostream>
 #include <vector>
@@ -13,7 +12,6 @@ class ComputerRepository : public BaseRepository
 public:
     ComputerRepository();
     ~ComputerRepository();
-
     void add(Computer);
     void remove(int id);
     std::vector<Computer> list();

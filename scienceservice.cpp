@@ -1,13 +1,16 @@
 #include "scienceservice.h"
 
-ScienceService::ScienceService() {
+ScienceService::ScienceService()
+{
     scientistRepository = ScientistRepository();
 }
 
-ScienceService::~ScienceService() {
+ScienceService::~ScienceService()
+{
 }
 
-void ScienceService::addScientist(Scientist scientist) {
+void ScienceService::addScientist(Scientist scientist)
+{
     scientistRepository.add(scientist);
 }
 
@@ -16,11 +19,13 @@ void ScienceService::removeScientist(int id)
     scientistRepository.remove(id);
 }
 
-std::vector<Scientist> ScienceService::getAllScientists() {
+std::vector<Scientist> ScienceService::getAllScientists()
+{
     return scientistRepository.list();
 }
 
-std::vector<Scientist> ScienceService::getScientistsOrderedBy(std::string col, std::string mod) {
+std::vector<Scientist> ScienceService::getScientistsOrderedBy(std::string col, std::string mod)
+{
     return scientistRepository.list(col,mod);
 }
 
@@ -44,17 +49,22 @@ std::vector<Computer> ScienceService::getComputersOrderedBy(std::string col, std
     return computerRepository.list(col, mod);
 }
 
-void ScienceService::connectScientists(int sID, int cID) {
+void ScienceService::connectScientists(int sID, int cID)
+{
     scientistRepository.connect(sID, cID);
 }
 
-void ScienceService::connectComputers(int cID, int sID) {
+void ScienceService::connectComputers(int cID, int sID)
+{
     computerRepository.connect(cID,sID);
 }
-std::vector<Scientist> ScienceService::connectedScientists(int sID) {
+
+std::vector<Scientist> ScienceService::connectedScientists(int sID)
+{
     return scientistRepository.connectedScientists(sID);
 }
 
-std::vector<Computer> ScienceService::connectedComputers(int cID) {
+std::vector<Computer> ScienceService::connectedComputers(int cID)
+{
     return computerRepository.connectedComputers(cID);
 }

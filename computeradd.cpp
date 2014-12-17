@@ -25,6 +25,7 @@ void ComputerAdd::on_compname_textChanged(const QString &arg1)
     newComputer.name = ui->compname->text().toStdString();
     }
 }
+
 void ComputerAdd::on_comptype_textChanged(const QString &arg1)
 {
     if(typeValid())
@@ -32,6 +33,7 @@ void ComputerAdd::on_comptype_textChanged(const QString &arg1)
     newComputer.type = ui->comptype->text().toStdString();
     }
 }
+
 void ComputerAdd::on_yearLine_textChanged(const QString &arg1)
 {
     newComputer.yearBuilt = ui->yearLine->text().toStdString();
@@ -62,7 +64,6 @@ void ComputerAdd::on_builtno_toggled(bool checked)
     {
         ui->yearLine->setEnabled(true);
     }
-
     newComputer.wasBuilt = "No";
 }
 
@@ -70,26 +71,24 @@ void ComputerAdd::on_builtyes_clicked()
 {
     newComputer.wasBuilt = "Yes";
 }
+
 bool ComputerAdd::nameLineValid()
 {
-
     if(ui->compname->text().isEmpty())
     {
         QMessageBox::warning(this,"Error input.", " Computer name line is empty!");
         return false;
     }
-
     return true;
 }
+
 bool ComputerAdd::typeValid()
 {
-
     if(ui->comptype->text().isEmpty())
     {
         QMessageBox::warning(this,"Error input.", " Type is empty!");
         return false;
     }
-
     return true;
 
 }

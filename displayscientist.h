@@ -12,15 +12,12 @@ class displayScientist;
 class displayScientist : public QDialog
 {
     Q_OBJECT
-
 public:
     explicit displayScientist(QWidget *parent = 0);
     ~displayScientist();
     void displayPhoto(Scientist scientist);
-
 private slots:
     void on_pushButton_clicked();
-
 private:
     Ui::displayScientist *ui;
     Scientist newscientist;

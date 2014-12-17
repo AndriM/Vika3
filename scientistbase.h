@@ -27,9 +27,7 @@ private slots:
     void displayAllScientists();
     void on_searchLine_textChanged(const QString &arg1);
     void on_listTable_doubleClicked(const QModelIndex &index);
-
     void on_removeButton_clicked();
-
 private:
     Ui::Scientistbase *ui;
     ScienceService scienceService;

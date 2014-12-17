@@ -14,7 +14,6 @@ bool BaseRepository::createConnection()
 QSqlDatabase BaseRepository::getDatabaseConnection()
 {
     QString connectionName = "ScienceConnection";
-
     QSqlDatabase database;
 
     if(QSqlDatabase::contains(connectionName))
@@ -25,13 +24,11 @@ QSqlDatabase BaseRepository::getDatabaseConnection()
     {
         database = QSqlDatabase::addDatabase("QSQLITE", connectionName);
         database.setDatabaseName("vika3.sqlite");
-
         database.open();
 
         //Turn foreign key check on
         QSqlQuery query(database);
         query.exec("PRAGMA FOREIGN_KEYS = ON");
     }
-
     return database;
 }

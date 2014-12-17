@@ -22,7 +22,6 @@ private slots:
     void on_connectButton_clicked();
     void on_comp_table_clicked(const QModelIndex &index);
     void on_sci_table_clicked(const QModelIndex &index);
-
 private:
     Ui::connection *ui;
     ScienceService scienceService;

@@ -23,6 +23,7 @@ void MainWindow::on_pushButtonScientist_clicked()
     Scientistbase scientistbase;
     scientistbase.exec();
 }
+
 void MainWindow::addComp()
 {
     ComputerAdd compadd;

@@ -81,6 +81,7 @@ void scientistadd::on_backButton_clicked()
 {
     close();
 }
+
 void scientistadd::on_photoButton_clicked()
 {
     QString filename = QFileDialog::getOpenFileName(this,
@@ -90,30 +91,25 @@ void scientistadd::on_photoButton_clicked()
                         );
 
     ui->imageLine->setText(filename);
-
     newScientist.imagePath = ui->imageLine->text().toStdString();
-
 }
+
 bool scientistadd::nameLineValid()
-{
-    
+{   
     if(ui->nameLine->text().isEmpty())
     {
         QMessageBox::warning(this,"Error input.", " Name line is empty!");
         return false;
     }
-
     return true;
 }
+
 bool scientistadd::yearOfBirthValid()
-{
-    
+{    
     if(ui->byLine->text().isEmpty())
     {
         QMessageBox::warning(this,"Error input.", " Birth year is empty!");
         return false;
-    }
-    
-    return true;
-    
+    }  
+    return true;    
 }

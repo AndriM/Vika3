@@ -7,11 +7,11 @@
 #include <iostream>
 #include <vector>
 
-class ScientistRepository : public BaseRepository{
+class ScientistRepository : public BaseRepository
+{
 public:
     ScientistRepository();
     ~ScientistRepository();
-
     void add(Scientist);
     void remove(int id);
     std::vector<Scientist> list();

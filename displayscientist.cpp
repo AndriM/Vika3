@@ -1,6 +1,7 @@
 #include "displayscientist.h"
 #include "ui_displayscientist.h"
 #include <iostream>
+
 displayScientist::displayScientist(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::displayScientist)

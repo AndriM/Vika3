@@ -3,13 +3,13 @@
 
 #include <QtSql>
 //Handles to open the database if it isn't open
-class BaseRepository{
+class BaseRepository
+{
     protected:
         QSqlDatabase db;
 
         bool createConnection();
         QSqlDatabase getDatabaseConnection();
-
 };
 
 #endif // BASEREPOSITORY_H

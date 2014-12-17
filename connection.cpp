@@ -49,7 +49,6 @@ void connection::displayAllScientists()
     }
 }
 
-
 void connection::displayAllComputers()
 {
     ui->comp_table->clearContents();

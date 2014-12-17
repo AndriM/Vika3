@@ -17,14 +17,12 @@ class scientistadd;
 class scientistadd : public QDialog
 {
     Q_OBJECT
-
 public:
     explicit scientistadd(QWidget *parent = 0);
     ~scientistadd();
     Scientist getScientist();
     bool nameLineValid();
     bool yearOfBirthValid();
-
 private slots:
     void on_nameLine_textChanged(const QString &arg1);
     void on_byLine_textChanged(const QString &arg1);
@@ -35,7 +33,6 @@ private slots:
     void on_checkBox_toggled(bool checked);
     void on_backButton_clicked();
     void on_photoButton_clicked();
-
 private:
     ScienceService scienceService;
     Scientist newScientist;

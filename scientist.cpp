@@ -17,6 +17,7 @@ void Scientist::setName(const std::string &value)
 {
     name = value;
 }
+
 std::string Scientist::getDateOfBirth() const
 {
     return dateOfBirth;
@@ -26,6 +27,7 @@ void Scientist::setDateOfBirth(const std::string &value)
 {
     dateOfBirth = value;
 }
+
 std::string Scientist::getDateOfDeath() const
 {
     return dateOfDeath;
@@ -35,6 +37,7 @@ void Scientist::setDateOfDeath(const std::string &value)
 {
     dateOfDeath = value;
 }
+
 std::string Scientist::getGender() const
 {
     return gender;
@@ -44,6 +47,7 @@ void Scientist::setGender(const std::string &value)
 {
     gender = value;
 }
+
 std::string Scientist::getImagepath() const
 {
     return imagePath;
@@ -99,8 +103,7 @@ std::string Scientist::stringToLower(std::string original)
     for(unsigned int i = 0; i < original.length(); ++i)
     {
         result += std::tolower(original[i]);
-    }
-
+    }    
     return result;
 }
 

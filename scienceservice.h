@@ -7,9 +7,9 @@
 #include "computerrepository.h"
 #include <list>
 
-
 // Domain layer, services the presentation layer
-class ScienceService {
+class ScienceService
+{
 public:
     ScienceService();
     ~ScienceService();
@@ -34,7 +34,6 @@ public:
 private:
     ScientistRepository scientistRepository;
     ComputerRepository computerRepository;
-
 };
 
 #endif // SCIENCESERVICE_H
