@@ -41,7 +41,7 @@ void ComputerAdd::on_yearLine_textChanged(const QString &arg1)
 
 void ComputerAdd::on_addButton_clicked()
 {
-    if(nameLineValid() && typeValid())
+    if(nameLineValid() && typeValid() && buildFieldValid())
     {
     Computer newComputer = getComputer();
     scienceService.addComputer(newComputer);
@@ -56,6 +56,8 @@ void ComputerAdd::on_back_clicked()
 
 void ComputerAdd::on_builtno_toggled(bool checked)
 {
+    no = true;
+    yes = false;
     if(checked)
     {
         ui->yearLine->setEnabled(false);
@@ -69,6 +71,8 @@ void ComputerAdd::on_builtno_toggled(bool checked)
 
 void ComputerAdd::on_builtyes_clicked()
 {
+    yes = true;
+    no = false;
     newComputer.wasBuilt = "Yes";
 }
 
@@ -91,4 +95,14 @@ bool ComputerAdd::typeValid()
     }
     return true;
 
+}
+
+bool ComputerAdd::buildFieldValid()
+{
+    if(yes == false && no == false)
+    {
+        QMessageBox::warning(this,"Error input.", " Build field is empty!");
+        return false;
+    }
+    return true;
 }

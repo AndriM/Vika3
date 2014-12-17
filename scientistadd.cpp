@@ -43,6 +43,8 @@ void scientistadd::on_maleRadio_toggled(bool checked)
 {
     if(checked)
     {
+        male = true;
+        female = false;
         newScientist.gender = "Male";
     }
 }
@@ -51,6 +53,8 @@ void scientistadd::on_femaleRadio_toggled(bool checked)
 {
     if(checked)
     {
+        female = true;
+        male = false;
         newScientist.gender = "Female";
     }
 }
@@ -69,7 +73,7 @@ void scientistadd::on_checkBox_toggled(bool checked)
 
 void scientistadd::on_addButton_clicked()
 {
-    if(nameLineValid() && yearOfBirthValid())
+    if(nameLineValid() && yearOfBirthValid() && genderFieldValid())
     {
     Scientist newScientist = getScientist();
     scienceService.addScientist(newScientist);
@@ -112,4 +116,14 @@ bool scientistadd::yearOfBirthValid()
         return false;
     }  
     return true;    
+}
+
+bool scientistadd::genderFieldValid()
+{
+    if(female == false && male == false)
+    {
+        QMessageBox::warning(this,"Error input.", " Gender field is empty!");
+        return false;
+    }
+    return true;
 }

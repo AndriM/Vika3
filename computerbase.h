@@ -7,6 +7,7 @@
 #include "connection.h"
 #include "scienceservice.h"
 #include "computer.h"
+#include "removeconfirm.h"
 
 namespace Ui {
 class Computerbase;

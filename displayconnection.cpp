@@ -7,7 +7,6 @@ displayConnection::displayConnection(QWidget *parent) :
 {
     ui->setupUi(this);
     displayAllScientists();
-    currentScientists = scienceService.getAllScientists();
 }
 
 displayConnection::~displayConnection()

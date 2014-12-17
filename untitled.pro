@@ -30,6 +30,7 @@ SOURCES += main.cpp\
     scientistconnect.cpp \
     displaysciconnection.cpp \
     displayscientist.cpp \
+    removeconfirm.cpp
 
 HEADERS  += mainwindow.h \
     baserepository.h \
@@ -47,6 +48,7 @@ HEADERS  += mainwindow.h \
     scientistconnect.h \
     displaysciconnection.h \
     displayscientist.h \
+    removeconfirm.h
 
 
 FORMS    += mainwindow.ui \
@@ -59,6 +61,7 @@ FORMS    += mainwindow.ui \
     scientistconnect.ui \
     displaysciconnection.ui \
     displayscientist.ui \
+    removeconfirm.ui
 
 OTHER_FILES += \
     science_db.sqlite \

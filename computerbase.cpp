@@ -87,6 +87,13 @@ void Computerbase::on_removeButton_clicked()
 {
     int row = ui->listTable->currentRow();
     removeID = ui->listTable->item(row,4)->text().toInt();
-    scienceService.removeComputer(removeID);
-    displayAllComputers();
+
+    RemoveConfirm remove;
+    remove.exec();
+
+    if(remove.button == true)
+    {
+        scienceService.removeComputer(removeID);
+        displayAllComputers();
+    }
 }

@@ -19,6 +19,7 @@ public:
     Computer getComputer();
     bool typeValid();
     bool nameLineValid();
+    bool buildFieldValid();
 private slots:
     void on_compname_textChanged(const QString &arg1);
     void on_comptype_textChanged(const QString &arg1);
@@ -31,6 +32,8 @@ private:
     Ui::ComputerAdd *ui;
     Computer newComputer;
     ScienceService scienceService;
+    bool yes;
+    bool no;
 };
 
 #endif // COMPUTERADD_H

@@ -7,7 +7,6 @@ DisplaySciConnection::DisplaySciConnection(QWidget *parent) :
 {
     ui->setupUi(this);
     displayAllComputers();
-    currentComputers = scienceService.getAllComputers();
 }
 
 DisplaySciConnection::~DisplaySciConnection()

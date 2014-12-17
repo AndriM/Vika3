@@ -23,6 +23,7 @@ public:
     Scientist getScientist();
     bool nameLineValid();
     bool yearOfBirthValid();
+    bool genderFieldValid();
 private slots:
     void on_nameLine_textChanged(const QString &arg1);
     void on_byLine_textChanged(const QString &arg1);
@@ -37,6 +38,8 @@ private:
     ScienceService scienceService;
     Scientist newScientist;
     Ui::scientistadd *ui;
+    bool female;
+    bool male;
 };
 
 #endif // SCIENTISTADD_H

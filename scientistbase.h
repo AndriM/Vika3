@@ -7,6 +7,7 @@
 #include "displayconnection.h"
 #include "scienceservice.h"
 #include "displayscientist.h"
+#include "removeconfirm.h"
 
 namespace Ui {
 class Scientistbase;

@@ -83,9 +83,15 @@ void Scientistbase::on_removeButton_clicked()
 {
     int row = ui->listTable->currentRow();
     removeID = ui->listTable->item(row,4)->text().toInt();
-    scienceService.removeScientist(removeID);
-    displayAllScientists();
 
+    RemoveConfirm remove;
+    remove.exec();
+
+    if(remove.button == true)
+    {
+        scienceService.removeScientist(removeID);
+        displayAllScientists();
+    }
 }
 
 void Scientistbase::on_button_disp_conn_clicked()
