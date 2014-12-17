@@ -18,11 +18,8 @@ SOURCES += main.cpp\
     baserepository.cpp \
     computer.cpp \
     computerrepository.cpp \
-    consoleui.cpp \
     scienceservice.cpp \
     scientist.cpp \
-    scientistcomputerconnections.cpp \
-    scientistcomputerconnectionsrepository.cpp \
     scientistrepository.cpp \
     scientistbase.cpp \
     computerbase.cpp \
@@ -38,12 +35,8 @@ HEADERS  += mainwindow.h \
     baserepository.h \
     computer.h \
     computerrepository.h \
-    ConsoleUI.h \
-    menus.h \
     scienceservice.h \
     scientist.h \
-    scientistcomputerconnections.h \
-    scientistcomputerconnectionsrepository.h \
     scientistrepository.h \
     scientistbase.h \
     computerbase.h \

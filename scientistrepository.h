@@ -14,7 +14,6 @@ public:
 
     void add(Scientist);
     void remove(int id);
-    //std::vector<Scientist> search(std::string searchTerm);
     std::vector<Scientist> list();
     // Returns a list ordered by column and modifier
     std::vector<Scientist> list(std::string col,std::string mod);

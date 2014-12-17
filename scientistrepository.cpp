@@ -63,21 +63,6 @@ std::vector<Scientist> ScientistRepository::list(std::string col, std::string mo
 
 }
 
-/*std::vector<Scientist> ScientistRepository::search(std::string searchTerm) {
-    // Naive search implementation, finds a substring in the name field
-    std::vector<Scientist> scientistList = std::vector<Scientist>();
-
-    QSqlQuery query(db);
-
-    std::string q = "SELECT * FROM Scientists WHERE Name LIKE '%"+searchTerm+"%'";
-
-    query.exec(QString::fromStdString(q));
-
-    populateScientistList(scientistList, query);
-
-    return scientistList;
-}*/
-
 void ScientistRepository::populateScientistList(std::vector<Scientist> &scientistList, QSqlQuery query){
     while(query.next()){
         Scientist s = Scientist();

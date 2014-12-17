@@ -24,10 +24,6 @@ std::vector<Scientist> ScienceService::getScientistsOrderedBy(std::string col, s
     return scientistRepository.list(col,mod);
 }
 
-/*std::vector<Scientist> ScienceService::searchScientist(std::string searchTerm) {
-    return scientistRepository.search(searchTerm);
-}*/
-
 void ScienceService::addComputer(Computer computer)
 {
     computerRepository.add(computer);
@@ -37,11 +33,6 @@ void ScienceService::removeComputer(int id)
 {
     computerRepository.remove(id);
 }
-
-/*std::vector<Computer> ScienceService::searchComputer(std::string searchTerm)
-{
-    return computerRepository.search(searchTerm);
-}*/
 
 std::vector<Computer> ScienceService::getAllComputers()
 {
@@ -67,23 +58,3 @@ std::vector<Scientist> ScienceService::connectedScientists(int sID) {
 std::vector<Computer> ScienceService::connectedComputers(int cID) {
     return computerRepository.connectedComputers(cID);
 }
-
-/*std::vector<Computer> ScienceService::getAllComputersByScientistId(std::string id)
-{
-    return scientistComputerConnectionsRepository.getAllComputersByScientistId(id);
-}
-
-std::vector<Scientist> ScienceService::getAllScientistsByComputerId(std::string id)
-{
-    return scientistComputerConnectionsRepository.getAllScientistsByComputerId(id);
-}
-
-bool ScienceService::addConnection(std::string sid, std::string cid)
-{
-    return scientistComputerConnectionsRepository.addConnection(sid, cid);
-}
-
-bool ScienceService::removeConnection(std::string sid, std::string cid)
-{
-    return scientistComputerConnectionsRepository.removeConnection(sid, cid);
-}*/

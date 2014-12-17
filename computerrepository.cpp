@@ -57,20 +57,6 @@ std::vector<Computer> ComputerRepository::list(std::string col, std::string mod)
 
 }
 
-/*std::vector<Computer> ComputerRepository::search(std::string searchTerm) {
-    // Naive search implementation, finds a substring in the name field
-    std::vector<Computer> computerList = std::vector<Computer>();
-
-    QSqlQuery query(db);
-
-    std::string q = "SELECT * FROM Computers WHERE Name LIKE '%"+searchTerm+"%'";
-
-    query.exec(QString::fromStdString(q));
-
-    populateComputerList(computerList, query);
-
-    return computerList;
-}*/
 
 void ComputerRepository::populateComputerList(std::vector<Computer> &computerList, QSqlQuery query){
     while(query.next()){

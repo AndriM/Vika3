@@ -13,7 +13,7 @@
 namespace Ui {
 class scientistadd;
 }
-
+//Adds scientists to the database
 class scientistadd : public QDialog
 {
     Q_OBJECT
