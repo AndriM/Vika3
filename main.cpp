@@ -1,10 +1,3 @@
-//#include "ConsoleUI.h"
-
-//int main() {
-//    ConsoleUI ui = ConsoleUI();
-
-//    return ui.start();
-//}
 #include "mainwindow.h"
 #include <QApplication>
 

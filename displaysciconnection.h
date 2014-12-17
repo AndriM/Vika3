@@ -9,6 +9,7 @@
 namespace Ui {
 class DisplaySciConnection;
 }
+//Displays the connection between computers and scientists
 class DisplaySciConnection : public QDialog
 {
     Q_OBJECT

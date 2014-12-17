@@ -10,7 +10,7 @@
 namespace Ui {
 class scientistConnect;
 }
-
+//Link computers to scientists
 class scientistConnect : public QDialog
 {
     Q_OBJECT

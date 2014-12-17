@@ -82,12 +82,6 @@ void Computerbase::on_searchLine_textChanged(const QString &arg1)
 {
     displayAllComputers();
 }
-
-void Computerbase::on_listTable_doubleClicked(const QModelIndex &index)
-{
-    //opna nyjan glugga með mynd og upplysingum
-}
-
 void Computerbase::on_removeButton_clicked()
 {
     int row = ui->listTable->currentRow();

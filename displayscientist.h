@@ -8,7 +8,7 @@
 namespace Ui {
 class displayScientist;
 }
-
+//popup window from scientists main window -> shows more information (photo)
 class displayScientist : public QDialog
 {
     Q_OBJECT

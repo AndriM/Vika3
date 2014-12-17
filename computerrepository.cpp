@@ -57,7 +57,6 @@ std::vector<Computer> ComputerRepository::list(std::string col, std::string mod)
 
 }
 
-
 void ComputerRepository::populateComputerList(std::vector<Computer> &computerList, QSqlQuery query){
     while(query.next()){
         Computer c = Computer();

@@ -11,7 +11,7 @@
 namespace Ui {
 class Computerbase;
 }
-
+//Main window for computers
 class Computerbase : public QDialog
 {
     Q_OBJECT
@@ -25,10 +25,6 @@ private slots:
     void on_button_connect_clicked();
     void on_backButton_clicked();
     void on_searchLine_textChanged(const QString &arg1);
-
-
-    void on_listTable_doubleClicked(const QModelIndex &index);
-
     void on_removeButton_clicked();
 
 private:

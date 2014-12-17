@@ -11,7 +11,7 @@
 namespace Ui {
 class Scientistbase;
 }
-
+//Main window for scientists
 class Scientistbase : public QDialog
 {
     Q_OBJECT

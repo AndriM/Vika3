@@ -9,7 +9,7 @@
 namespace Ui {
 class ComputerAdd;
 }
-
+//Adds computers to the database
 class ComputerAdd : public QDialog
 {
     Q_OBJECT

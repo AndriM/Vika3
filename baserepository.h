@@ -2,7 +2,7 @@
 #define BASEREPOSITORY_H
 
 #include <QtSql>
-
+//Handles to open the database if it isn't open
 class BaseRepository{
     protected:
         QSqlDatabase db;
