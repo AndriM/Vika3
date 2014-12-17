@@ -13,3 +13,5 @@ class BaseRepository
 };
 
 #endif // BASEREPOSITORY_H
+
+//komment fyrir Völu
